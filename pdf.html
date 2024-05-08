@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title></title>
+	
+    <style>
+		
+		
+		html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+
+        }
+
+		
+		body {
+			background-color: #e7e7e7;
+
+	
+			/*background-color: #e7e7e7; /* 画像の外の色 */
+			/*background-color: #dae1da; /* 画像の外の色 */
+		}
+		
+		/* ここから画像のスタイル */
+        .img-container {
+			
+
+            height: calc(100% - 68px); /*画面幅が小さくなった時、横スクロールの位置が変わる。*/
+            width: 100%;
+            overflow: auto;
+            position: relative;
+			padding-left: 2px;
+			top:-10px;
+			text-align: center;
+    
+        }
+
+
+		.img-wrapper {
+		  display: inline-block;
+		  max-width: var(--max-width, 1000px);
+		}
+
+		.img-wrapper img {
+			max-width: 100%; /* 画像がラッパーの幅を超えないようにする */
+			height: auto; /* 画像のアスペクト比を保つ */
+			margin-bottom: 50px; /* ここで余白を追加 */
+		}	
+
+		img.img-shadow {
+			max-width: none;
+			object-fit: contain;
+			position: relative;
+			top: 10px;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+		}
+
+		img.img-no-shadow {
+			max-width: none;
+			object-fit: contain;
+			position: relative;
+			top: 10px;
+		}
+
+		
+		
+		.dropdown-container {
+
+		  text-align: right;
+		  margin-bottom: 10px;
+		  margin-top: 5px;
+		  padding-right: 10px;
+		  position: relative;
+		  /*z-index: 4; */
+		  height: 1px; /* この領域を小さくしておけば、dropdownの高さでリンクできない問題が解決される */
+		  top: -35px;
+		}
+		
+		select {
+  			background-color: rgba(255, 255, 150, 1);
+		}		
+
+        @media screen and (min-width: 650px) {
+			
+            .img-container {
+				height: calc(100% - 70px);
+				padding-left: 2px;
+				padding-top: 30px; /*横スクロールバーの高さ、画像の高さに影響する*/
+				text-align: center;
+				
+            }
+		
+			img {
+				top: -10px;
+				/*left:20px;*/
+			}
+			
+			.dropdown-container {
+			 
+			  top: -33px;
+			
+			}
+        }
+		
+		
+		/* ここからメニューのスタイル */
+		ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            /*background-color: #CBC9C9;*/
+			background-color: #1a5845;
+			text-align: center; 
+        }
+
+        li {
+       
+        	display: inline-block; 
+        }
+
+        li a {
+			font-size: 12px;
+            display: block;
+            /*color: #3041F9;*/
+			color: #ffffff;
+            text-align: center;
+            padding: 7px 10px; /*項目の間隔*/
+            text-decoration: none;
+
+			/*text-decoration: underline;*/
+			
+        }
+
+        li a:hover {
+            /*background-color:#DFDEDE;*/
+			background-color:#2d866b;
+			/*text-decoration: underline;*/
+        }
+		
+		
+		@media screen and (max-width: 700px) {
+		
+			li a {
+				font-size: 12px;
+				padding: 7px 5px; /*項目の間隔*/
+			}
+			
+
+		}
+		
+		@media screen and (max-width: 800px) {
+			
+			ul {
+				text-align: left; 
+			}			
+			
+		}
+		
+		/*画像サイズの最大値を設定。画面サイズが900をこえたらそれ以上画像は大きくならない*/
+		/*
+		@media screen and (min-width: 900px) {
+			img {
+				max-width: 900px;
+			}
+		}		
+		*/
+
+		#loadingMessage {
+			font-size: 24px; /* 文字サイズを大きくします */
+			position: fixed; /* メッセージを固定位置に配置します */
+			top: 50%; /* 画面の縦方向で中央に位置するようにします */
+			left: 50%; /* 画面の横方向で中央に位置するようにします */
+			transform: translate(-50%, -50%); /* この要素の中央が画面の中央に来るように調整します */
+			z-index: 1000; /* 他の要素よりも前面に表示するためのz-indexを高めに設定します */
+			color: black; /* 文字色を黒にします */
+			background: white; /* 背景色を白にします */
+			padding: 20px; /* パディングを追加してメッセージ周りにスペースを作ります */
+			border-radius: 10px; /* メッセージのコンテナに丸みを追加します */
+		}
+
+		
+		
+    </style>
+	
+	<script>
+		 
+	　/*サイズ変更*/	
+	  function changeImageSize(size) {
+		var image = document.querySelector(".img-container img");
+		if (image) {
+		  image.style.width = size + "%";
+		}
+	  }
+
+		// 初期サイズの設定
+		function setInitialImageSize(size) {
+		  var image = document.querySelector(".img-container img");
+		  if (image) {
+			if (window.innerWidth <= 700) { //スマフォなら画像の初期値を100%にする。
+				//alert("aa");
+			  image.style.width = "100%";
+			} else {
+			  image.style.width = size + "%";
+			}
+		  }
+		}
+
+		
+
+	　/*引数の取り込み*/	
+	  function getQueryParam(name) {
+		const urlParams = new URLSearchParams(window.location.search);
+		return urlParams.get(name);
+	  }
+
+	　/*読み込みファイルの設定と、初期サイズの設定*/	
+	  document.addEventListener("DOMContentLoaded", function () {
+		const initialSize = getQueryParam("size") || 95;
+		setInitialImageSize(initialSize); // 画像の初期倍率
+
+		const imgFileName = getQueryParam("img");
+		const imgElement = document.querySelector(".img-container img");
+		if (imgFileName && imgElement) {
+		  imgElement.src = imgFileName;
+
+		//ページ名の取り込み。アクセス解析のため。	
+		const pagename = decodeURIComponent(getQueryParam("name")) || "unknown";
+
+		//alert(pagename);
+			
+		  //複数枚からできているときは、大枠の外側の影を消す。（子枠にそれぞれ影を付けるため）	
+		  const malti = getQueryParam("malti");
+			if(malti == '1') {
+				imgElement.classList.add('img-no-shadow');
+			} else {
+				imgElement.classList.add('img-shadow');
+			}			
+			
+			
+		 //画像のmax-widthの設定	
+		  const initialMaxWidth = getQueryParam("max_width") || 1000;
+		  setInitialMaxWidth(initialMaxWidth); // 関数呼び出し
+
+
+		
+		
+		}
+	  });
+
+		// Max-widthの設定
+		function setInitialMaxWidth(max) {
+		  var imgWrapper = document.querySelector(".img-wrapper");
+		  if (imgWrapper) {
+			imgWrapper.style.maxWidth = max + "px";
+		  }
+		}		
+		
+		
+		
+		function goBack() {
+		  window.history.back();
+		}		
+		
+	</script>
+	
+</head>
+	
+<body oncontextmenu="return false;">
+
+	<ul>
+		<li><a href="#" onclick="goBack()">戻る</a></li>
+		<li><a href="index.html" target="_parent">トップページ</a></li>
+		<li><a href="school/school.html" target="_parent">広商</a></li>
+		<li><a href="life/life.html" target="_parent">学校生活</a></li>
+		<li><a href="students/students.html" target="_parent">在校生の方</a></li>
+		<li><a href="index.html" target="_parent">保護者の方</a></li>
+		<li><a href="junior/junior.html" target="_parent">中学生の方</a></li>
+		<li><a href="school/data/R04/shoumeishohakkou.pdf" target="_parent">卒業生の方</a></li>
+		<li><a href="school/data/R04/R04_keihou.pdf" target="_parent">警報発令時</a></li>
+	</ul>
+
+
+    <div class="dropdown-container">
+      <select onchange="changeImageSize(this.value)">
+		<option value="" selected>拡大</option>
+	    <option value="500">500%</option>    
+		<option value="400">400%</option>  
+		<option value="300">300%</option>
+		<option value="250">250%</option>		  
+		<option value="200">200%</option>
+		<option value="180">180%</option>
+		<option value="160">160%</option>
+		<option value="150">150%</option>
+	    <option value="140">140%</option>
+		<option value="130">130%</option>
+		<option value="120">120%</option>
+		<option value="110">110%</option>
+        <option value="95">100%</option>
+		<option value="90">90%</option>
+		<option value="80">80%</option>
+		<option value="70">70%</option>
+        <option value="60">60%</option>
+		<option value="50">50%</option>
+        <option value="40">40%</option>
+		<option value="30">30%</option>
+      </select>
+    </div>
+	
+  <!-- 読み込み中のメッセージを表示するための要素を追加 -->
+<div id="loadingMessage">読み込み中</div>
+	
+<div class="img-container">
+  <div class="img-wrapper">
+    <img src="" alt="" onload="hideLoadingMessage()">
+  </div>
+</div>
+
+
+<script>
+  function hideLoadingMessage() {
+    // 画像が読み込まれたら読み込み中のメッセージを非表示にする
+    document.getElementById('loadingMessage').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<style>
+	   html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+		.header {
+			position: relative;
+			height: 60px;
+			width: 100%;
+			background-color: #033317; 
+			
+		}
+	
+		
+		.header .img2 {
+			position: relative;
+			height: auto;
+		  	width: 250px; 
+			margin-left: 5px;
+			top: 0px;
+		}
+		
+		
+		
+				
+
+		
+		.header .img3 { 
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 22px;
+			right: 130px;
+			opacity: 1;
+		}
+		
+		.header .img4 {
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 20px;
+			right: 110px; 
+			opacity: 0.7;
+		}
+		
+
+		.header .img5 {
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 22px;
+			right: 80px; 
+			opacity: 1;
+		}			
+		
+		.header .img6 {
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 22px;
+			right: 40px; 
+			opacity: 0.7;
+		}
+		
+		.header .img7 {
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 22px;
+			right: 10px; 
+			opacity: 1;
+		}		
+		
+			
+
+		
+		  .header a:hover .img3 {
+			opacity: 0.5;
+		  }
+
+		  .header a:hover .img4 {
+			opacity: 0.5;
+		  }		
+
+		  .header a:hover .img5 {
+			opacity: 0.5;
+		  }		
+
+		  .header a:hover .img6 {
+			opacity: 0.5;
+		  }
+
+		  .header a:hover .img7 {
+			opacity: 0.5;
+		  }	
+		
+		
+	
+		
+	
+		.header .sname {
+			position: absolute;
+			display: block; /*これを追加することでtext-align: center;ができる。*/
+			color: #CCCACA;
+			font-size: 13px;
+			text-align: center;
+			top: 10px;
+			left: 50%; /* 追加 */
+			transform: translateX(-50%); /* 追加 */			
+		}		
+		
+		
+	
+	
+		
+		#footer{
+		  background:#024A0F;
+		}
+		
+		#footer a{
+		  text-decoration: none;
+		}
+		
+	  #footer a:hover {
+		opacity: 0.8;
+	  }		
+
+		#footer .cont{
+		  display: -webkit-box;
+		  display: -webkit-flex;
+		  display: -ms-flexbox;
+		  display: flex;
+		  padding: 30px 0;
+		}
+		#footer .cont-item{
+		  display: block;
+		  width: calc(16%);
+		  text-align : left;
+		}
+		#footer .nav a{
+		  display: block;
+		  color: #ccc;
+		}
+		#footer .nav .ttl{
+
+		  display: block;
+		  margin: 30px 0 6px;
+		  font-size: 14px;
+		  font-weight: bold;
+		  color: #fff;
+		}
+		#footer .nav .ttl:first-child{
+		  margin-top: 0;
+		}
+		#footer .nav .ttl{
+
+		  margin-top: 10px;
+		  font-size: 14px;
+		}
+		#footer .nav ul{
+			
+		  display: block;
+		  font-size: 12px;
+		  line-height: 2;
+		}
+		#footer .nav li{
+		  display: block;
+		  font-size: 12px;
+		  line-height: 2;
+		}
+		#footer .nav li:first-child{
+		  margin-top: 0;
+		}
+		#footer .nav li ul{
+		  margin: 0 0 0 2em;
+		}
+		#footer .nav li li{
+		  position: relative;
+		}
+		#footer .nav li li::before{
+		  position: absolute;
+		  top: 50%;
+		  left: -10px;
+		  content: "";
+		  display: block;
+		  width: 4px;
+		  height: 1px;
+		  background-color: #fff;
+		}
+		#footer .company{
+		  display: block;
+		  margin-top: 62px;
+		}
+		#footer .logo img{
+		  width: 120px;
+		}
+		#footer .address{
+		  display: block;
+		  margin: 28px 0 0;
+		  font-size: 12px;
+		  line-height: 2;
+		  color: #ccc;
+		}		
+		
+
+		.ttl {
+		  display: block;
+		  margin: 50px 0 6px;
+		  font-size: 16px;
+		  font-weight: bold;
+		  color: #fff;
+		  border-bottom: 2px solid #ddd; /* 線の太さ、種類、色 */
+		  /*padding-bottom: 20px;*/
+
+		}		
+		
+		
+	/* 【注意】メディアクエリーを下の順番にしておかないと、反映されまい。*/	
+		
+	@media screen and (max-width: 600px) {
+		
+		  #footer .cont-item .nav ul {
+			text-align: center;
+			margin-left: -30px; /*600px以上のところで、footerが30ｐｘ右寄せにされているので、それを修正*/
+			  
+		
+		  }		
+
+		  #footer {
+
+			display: flex;
+			justify-content: center;
+			align-items: center;	
+
+			/*display: none;*/
+		  }			
+
+			#footer .cont-item{
+			  display: block;
+			  width: 100%;
+
+			}
+			
+			
+			#footer .cont {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			
+			
+			.header .sname {
+				position: absolute;
+				display: block; /*これを追加することでtext-align: center;ができる。*/
+				color: #CCCACA;
+				font-size: 10px;
+				text-align: left;
+				top: 10px;
+				left: 7%; /* 追加 */
+				transform: translateX(-10%); /* 追加 */
+			}		
+
+			.header .img1 {
+			
+				margin-left: 0px;
+
+			}		
+
+			#footer .nav .ttl {
+			  display: block;
+			  margin: 50px 0 6px;
+			  font-size: 16px;
+			  font-weight: bold;
+			  color: #fff;
+			  border-bottom: 1px solid #aaa; /* 線の太さ、種類、色 */
+			  width: 300px;
+
+			}		
+			#footer .nav ul{
+
+			  display: block;
+			  font-size: 18px;
+			  line-height: 2;
+			}
+			#footer .nav li{
+			  display: block;
+			  font-size: 14px;
+			  line-height: 2;
+			}		
+
+		}
+				
+
+	</style>
+	
+	
+	
+	
+	
+</head>
+<body>
+	
+<footer id="footer" class="outer-block footer">
+<div class="inner-block">
+  <div class="cont">
+	  
+    <div class="cont-item">
+      <div class="nav">
+        
+        <ul>
+			<div class="ttl"><span>学校紹介</span></div>
+          <li><a href="pdf.html?img=pdf/principal.jpg&size=80&max_width=900" target="_parent">校長挨拶</a></li> 
+          <li><a href="html_ifr.html?html=school/school.html&height=1100&height_s=1500" target="_parent"">学校経営計画</a> </li>
+          <li><a href="school/data/R04/enkaku.pdf" target="_parent" target="_parent">学校沿革</a></li> 
+          <li><a href="https://www.hiroshima-ch.hiroshima-c.ed.jp/" target="_parent">事務室</a></li> 
+          <li><a href="pdf.html?img=life/data/R05/R5_kyouikukatei.jpg&size=80" target="_parent">教育課程</a></li>
+           <li><a href="html_ifr.html?html=project-sol/project-s.html&height=820&height_s=820"  target="_parent">課題発見・解決学習</a></li>
+          <li><a href="school/data/R05/access.html" target="_parent">アクセス</a></li> 
+        </ul>
+      </div>
+    </div>
+	  
+	  
+    <div class="cont-item">
+      <div class="nav">
+        
+        <ul>
+		  <div class="ttl"><span>学校生活</span></div>
+          <li><a href="pdf.html?img=pdf/R6_schedule1.jpg&size=150" target="_parent">行事予定</a></li> 
+          <li><a href="html_ifr.html?html=club/club.html&height=2450&height_s=1850" target="_parent">部活動</a></li> 
+          <li><a href="pdf.html?img=pdf/R4_sinrojyoukyou.jpg&size=90&name=進路状況" target="_parent">進路</a></li>
+		  <li><a href="syokitei/syokitei.html" target="_parent">諸規定</a></li> 	
+        </ul>
+      </div>
+    </div>
+    <div class="cont-item">
+      <div class="nav">
+        
+        <ul>
+		  <div class="ttl"><span>在校生の方</span></div>	
+          <li><a >各種通知</a></li> 
+          <li><a href="html_ifr.html?html=hokenshitsu/hoken_top.html&height=900&height_s=700" target="_parent">保健室</a></li> 
+
+        </ul>
+      </div>
+    </div>
+    <div class="cont-item">
+      <div class="nav">
+        
+        <ul>
+		  <div class="ttl"><span>保護者の方</span></div>
+          <li><a >各種通知</a></li>  
+          <li><a href="scholarship/scholarship.html" target="_parent">奨学金</a></li> 
+        </ul>
+      </div>
+    </div>
+    <div class="cont-item">
+      <div class="nav">
+        
+        <ul>
+		  <div class="ttl"><span>中学生の方</span></div>	
+          <li><a href="pdf.html?img=school/data/R05/R05_pamphlet1.jpg&size=95&name=学校案内" target="_parent">学校案内</a></li> 
+          <li><a href="html_ifr.html?html=nyuushi_R06/ny.html&height=1300&height_s=1200" target="_parent">入試情報</a></li> 
+          <li><a href="pdfb.html?img=event/openschool2023/R5_openschool_1.jpg&size=95&name=第1回オープンスクール" target="_parent">オープンスクール</a></li> 
+        </ul>
+      </div>
+    </div>
+    <div class="cont-item">
+      <div class="nav">
+        
+        <ul>
+		  <div class="ttl"><span>卒業生の方</span></div>
+          <li><a href="https://hirosho-ob.jp/" target="_parent">同窓会</a></li> 
+          <li><a href="school/data/R04/shoumeishohakkou.pdf" target="_parent">申請書類など</a></li> 
+        </ul>
+      </div>
+    </div>
+  
+  </div>	
+	
+</footer>	
+
+	
+	
+	<div class="header">
+
+
+		<span class="sname" >〒730-0847 広島県広島市中区舟入南6丁目7-11<br>TEL:082-231-9315　FAX:082-231-9317</span>
+		
+	
+		<a href="https://twitter.com/hirosho1899" target="_parent"><img class="img3" src="html_ifr/img/X2.png" title="エックス"></a>
+		<a href="https://www.facebook.com/people/広デパンダ広商デパート/100063801558856/" target="_parent"><img class="img4" src="html_ifr/img/facebook2.png" title="フェイスブック"></a>
+		<a href="https://www.instagram.com/hirosho_department_store/" target="_parent"><img class="img5" src="html_ifr/img/instagram2.png" title="インスタグラム"></a>
+		<a href="https://www.youtube.com/channel/UCYLR46zqecUWZHzh1VpZFTg" target="_parent"><img class="img6" src="html_ifr/img/youtube2.png" title="ユーチューブ"></a>
+		
+		<a href="https://www.tiktok.com/@hirodepanda"  target="_parent"><img class="img7" src="html_ifr/img/tiktok2.png" title="ティックトック"></a>
+	
+	</div>	
+	
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+	   html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+		.header {
+			position: relative;
+			height: 75px;
+			width: 100%;
+			
+		}
+
+		.header .img1 {
+			position: relative;
+			height: 60px;
+		  	width: 50px; 
+			margin-left: 30px;
+			top: 5px;
+		}		
+		
+		.header .img2 {
+			position: relative;
+			height: auto;
+		  	width: 250px; 
+			margin-left: 5px;
+			top: 0px;
+		}
+		
+		
+		.header .img11 {
+			position:absolute;
+			height: 47px;
+		  	width: auto; 
+			top: 22px;
+			right: 200px;
+			opacity: 0.9;
+		}			
+		
+		.header .img12 {
+			position:absolute;
+			height: 50px;
+		  	width: auto; 
+			top: 18px;
+			right: 270px;
+			opacity: 1.0;
+		}	
+		
+		/*
+		.header .img13 {
+			position:absolute;
+			height: 60px;
+		  	width: 70; 
+			top: 10px;
+			right: 340px;
+			opacity: 1.0;
+		}			
+		*/
+				
+		
+		
+		.header .img3 { /*t*/
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 38px;
+			right: 130px;
+			opacity: 0.5;
+		}
+		
+		.header .img4 {/*f*/
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 35px;
+			right: 110px; 
+			opacity: 0.5;
+		}
+		
+
+		.header .img5 {/*I*/
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 37px;
+			right: 80px; 
+			opacity: 0.6;
+		}			
+		
+		.header .img6 {/*Y*/
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 37px;
+			right: 40px; 
+			opacity: 0.5;
+		}
+		
+		.header .img7 {/*Tiktok*/
+			position:absolute;
+			height: 25px;
+		  	width: auto; 
+			top: 35px;
+			right: 10px; 
+			opacity: 0.5;
+		}		
+		
+			
+		
+		
+		  .header a:hover .img3 {
+			opacity: 0.7;
+		  }
+
+		  .header a:hover .img4 {
+			opacity: 0.7;
+		  }		
+
+		  .header a:hover .img5 {
+			opacity: 0.9;
+		  }		
+
+		  .header a:hover .img6 {
+			opacity: 0.7;
+		  }
+
+		  .header a:hover .img7 {
+			opacity: 0.7;
+		  }	
+		
+		  .header a:hover .img11 {
+			opacity: 0.5;
+		  }			
+		
+		  .header a:hover .img12 {
+			opacity: 0.6;
+		  }	
+		
+		
+		ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            /*background-color: #CBC9C9;*/
+			background-color: #1f6852;
+			text-align: center; 
+        }
+
+        li {
+       
+        	display: inline-block; 
+        }
+
+        li a {
+			font-size: 12px;
+            display: block;
+            /*color: #3041F9;*/
+			color: #ffffff;
+            text-align: center;
+            padding: 7px 10px; /*項目の間隔*/
+            text-decoration: none;
+
+			/*text-decoration: underline;*/
+			
+        }
+
+        li a:hover {
+            /*background-color:#DFDEDE;*/
+			background-color:#2d866b;
+			/*text-decoration: underline;*/
+        }
+		
+		
+		
+		
+		@media screen and (max-width: 600px) {
+		
+			li a {
+				font-size: 12px;
+				padding: 7px 5px; /*項目の間隔*/
+			}
+			
+			.header .img1 {
+				position: relative;
+				height: 55px;
+				width: 45px; 
+				margin-left: 30px;
+				top: 5px;
+				margin-left: 0px;
+			}		
+
+			.header .img2 {
+				position: relative;
+				height: auto;
+				width: 190px; 
+				margin-left: 0px;
+				top: 0px;
+			}
+					
+			
+			.header .img3 {/*Tiktok*/
+				display: none;
+			}	
+			.header .img4 {/*Tiktok*/
+				display: none;
+			}	
+			.header .img5 {/*Tiktok*/
+				display: none;
+			}	
+			.header .img6 {/*Tiktok*/
+				display: none;
+			}	
+			.header .img7 {/*Tiktok*/
+				display: none;
+			}	
+			
+			
+			.header .img11 {
+				right: 10px;
+			}			
+
+			.header .img12 {
+				right: 70px;
+			}				
+		
+
+
+		}
+		
+	
+	
+		
+		
+		
+		
+	</style>
+	
+	<script>
+		function goBack() {
+		  window.history.back();
+		}
+		
+		
+	
+		
+	</script>
+	
+	
+</head>
+<body>
+	
+	<div class="header">
+
+		<img class="img1" src="html_ifr/img/kousyou_g.png">
+		<img class="img2" src="html_ifr/img/koumei_a.png">
+		
+		<!--a href="pdf.html?img=school/data/R04/R04_pamphlet.jpg&size=95&name=学校案内" target="_parent"><img class="img13" src="html_ifr/img/kyouiku.png"></a-->
+		
+	
+		<a href="pdf.html?img=school/data/R05/R05_pamphlet1.jpg&size=95&name=学校案内" target="_parent"　　　　><img class="img12" src="html_ifr/img/gakkouannai.png"></a>
+		
+		<a href="school/data/R05/access.html" target="_parent"><img class="img11" src="html_ifr/img/access2.png"></a>		
+		
+		
+		
+		<a href="https://twitter.com/hirosho1899" target="_parent"><img class="img3" src="html_ifr/img/X.png" title="エックス"></a>
+		<a href="https://www.facebook.com/people/広デパンダ広商デパート/100063801558856/" target="_parent"><img class="img4" src="html_ifr/img/facebook.png" title="フェイスブック"></a>
+		<a href="https://www.instagram.com/hirosho_department_store/" target="_parent"><img class="img5" src="html_ifr/img/instagram.png" title="インスタグラム"></a>
+		<a href="https://www.youtube.com/channel/UCYLR46zqecUWZHzh1VpZFTg" target="_parent"><img class="img6" src="html_ifr/img/youtube.png" title="ユーチューブ"></a>
+		<a href="https://www.tiktok.com/@hirodepanda"  target="_parent"><img class="img7" src="html_ifr/img/tiktok.png" title="ティックトック"></a>
+
+	</div>	
+	
+	
+	
+	<ul>
+		<!--li><a href="#" onclick="goBack()"  >戻る</a></li-->
+		<li><a href="index.html" target="_parent">トップページ</a></li>
+		<li><a href="school/school.html" target="_parent">広商</a></li>
+		<li><a href="life/life.html" target="_parent">学校生活</a></li>
+		<li><a href="students/students.html" target="_parent">在校生の方</a></li>
+		<li><a href="index.html" target="_parent">保護者の方</a></li>
+		<li><a href="junior/junior.html" target="_parent">中学生の方</a></li>
+		<li><a href="school/data/R04/shoumeishohakkou.pdf" target="_parent">卒業生の方</a></li>
+		<li><a href="school/data/R04/R04_keihou.pdf" target="_parent">警報発令時</a></li>
+	</ul>
+</body>
+</html>

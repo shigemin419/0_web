@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title></title>
+	
+    <style>
+       html, body {
+            height: 100%;
+            margin: 0;
+		    position: relative;
+		    min-height: 100%;
+
+        }
+		
+		
+
+		 .header-container {
+			position:relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 10;
+		}
+
+ 		
+
+		
+	    .footer-container {
+			position:  relative;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+			
+		
+
+
+
+		#ifr {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  z-index: 3;
+	
+		}
+		
+		#ifr2 {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 380px;
+		  width: 100%;	
+		  z-index: 4;
+		}				
+		
+	
+   	
+
+
+		
+		
+		@media screen and (max-width: 650px) {
+			.img-container {
+			  height: auto;
+			  width: 100%;
+			  position: relative;
+			  top: 150px !important;
+			  margin-bottom: 155px !important;
+			  text-align: center; /* 画像を中央に配置 */
+			}
+	
+			
+		}
+		
+		
+		.img-container {
+		  height: auto;
+		  width: 100%;
+		  position: relative;
+		  top: 120px; /* 画像を下に20px移動 */
+		  margin-bottom: 130px;
+		  text-align: center; /* 画像を中央に配置 */
+		}
+
+		.img-container img {
+		  width: 100%;
+		  height: auto;
+		  max-width: 1000px;
+		  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* ページの画像に影を付ける */
+		}
+
+	</style>
+		
+		
+
+
+	<script>
+		 
+	　/*サイズ変更*/	
+	  function changeImageSize(size) {
+		var image = document.querySelector(".img-container img");
+		if (image) {
+		  image.style.width = size + "%";
+		}
+	  }
+
+		// 初期サイズの設定
+		function setInitialImageSize(size) {
+		  var image = document.querySelector(".img-container img");
+		  if (image) {
+			if (window.innerWidth <= 700) { //スマフォなら画像の初期値を100%にする。
+				//alert("aa");
+			  image.style.width = "100%";
+			} else {
+			  image.style.width = size + "%";
+			}
+		  }
+		}
+
+		
+
+	　/*引数の取り込み*/	
+	  function getQueryParam(name) {
+		const urlParams = new URLSearchParams(window.location.search);
+		return urlParams.get(name);
+	  }
+
+	document.addEventListener("DOMContentLoaded", function () {
+		const initialSize = getQueryParam("size") || 95;
+		setInitialImageSize(initialSize); // 画像の初期倍率
+
+		const imgFileName = getQueryParam("img");
+		
+		const imgElement = document.querySelector(".img-container img");
+		if (imgFileName && imgElement) {
+			imgElement.src = imgFileName;
+		}
+	});
+
+		
+	function goBack() {
+	  window.history.back();
+	}		
+		
+	</script>
+
+	
+
+</head>
+<body>
+	
+    <div class="header-container">
+        <iframe id="ifr" src="header.html" frameborder="0" width="100%" height="166px" scrolling="no"></iframe>
+    </div>
+	
+
+	
+
+	<div class="img-container">
+		<!--img  src="pdf/R5_openschool_1.jpg"-->
+		<img src="" alt="データを読み込んでいます。" >
+	</div>
+	
+	
+	
+	
+
+	<div class="footer-container">
+		<iframe id="ifr2" src="footer.html" frameborder="0"  scrolling="no"></iframe>
+	</div>
+
+
+</body>
+</html>

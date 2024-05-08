@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title></title>
+	
+    <style>
+       html, body {
+            height: 100%;
+            margin: 0;
+		    position: relative;
+		    min-height: 100%;
+
+        }
+	
+
+		 .header-container {
+			position:relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 10;
+	
+
+		}
+
+ 		
+
+		
+	    .footer-container {
+			position:  relative;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+
+		}
+			
+		
+
+
+
+		#ifr {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  z-index: 3;
+	
+		}
+		
+		#ifr2 {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 380px;
+		  width: 100%;	
+		  z-index: 4;
+		}				
+		
+	/* For 'html-container' */
+	.html-container {
+
+		position: relative;
+		width: 100%;
+		/*height: calc(100% - 50px); /* adjust as needed */
+		overflow: hidden; /* if the content is larger than the container, add a scrollbar */
+		top: 107px;
+		height: 20000px;
+
+	}
+
+	/* For 'html-frame' */
+	#html-frame {
+		width: 100%;
+		height: 100%;
+		border: 0; /* to remove any default borders */
+		 /*overflow: auto; /* to hide scrollbar of the iframe itself */
+	}
+
+
+		
+	@media screen and (max-width: 600px) {
+		
+		#ifr2 {
+		  height: 20000px;
+		}				
+			
+		.html-container {
+		  height: auto;
+		  width: 100%;
+		  position: relative;
+		  top: 130px !important;
+		  margin-bottom: 155px !important;
+		  text-align: center; /* 画像を中央に配置 */
+		}
+
+		#html-frame {
+			width: 100%;
+			height: 100%;
+			border: 0; 
+       		transform: scale(1.0); /* 縮小表示 */
+        	transform-origin: 0 0;
+		}		
+		
+		
+	}
+		
+	
+	
+
+	</style>
+		
+		
+
+
+	<script>
+		 
+		
+
+		 /*引数の取り込み*/	
+		  function getQueryParam(name) {
+			const urlParams = new URLSearchParams(window.location.search);
+			return urlParams.get(name);
+		  }
+
+		
+		function goBack() {
+		  window.history.back();
+		}		
+
+		// iframeの高さを調整する関数
+		function adjustIframeHeight(iframe) {
+			const doc = iframe.contentWindow.document;
+			const scrollHeight = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+			iframe.style.height = scrollHeight + 'px';
+		}
+
+		window.onload = function() {
+			let iframe = document.getElementById('html-frame');
+			iframe.src = getQueryParam('html');
+			iframe.onload = function() {
+				adjustIframeHeight(this);
+			}
+		}
+	</script>
+
+</head>
+<body>
+	
+    <div class="header-container">
+        <iframe id="ifr" src="header.html" frameborder="0" width="100%" height="166px" scrolling="no"></iframe>
+    </div>
+	
+
+	
+	<div class="html-container">
+		<iframe id="html-frame" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	
+	
+
+
+</body>
+</html>
