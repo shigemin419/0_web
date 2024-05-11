@@ -296,7 +296,7 @@
 		table-layout : fixed;
 		max-width: 1000px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
-		height: 310px;
+		height: 510px;
 		margin-top: -10px;
 		margin-left: 20px;
 		scrollbar-width: thin; /* スクロールバーの幅 */
@@ -362,7 +362,7 @@
 		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
 		margin-bottom: 40px;
-		height: 400px;
+		height: 600px;
 	}
 
 
@@ -861,7 +861,7 @@
 		
 		.infobox {
 			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
-
+			height: 700px;
 		}
 
 		
@@ -935,7 +935,7 @@
 		#sec02 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 400px;
+			height: 800px;
 		}
 		
 		#sec03 {
