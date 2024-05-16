@@ -41,6 +41,7 @@
 
 		
 	/*ラベルの設定*/
+	.news .syouken,
 	.news .sns,
 	.news .osirase,
 	.news .bukatu,
@@ -53,13 +54,24 @@
 		margin-left: 10px;
 	}
 
+
+
 	.news .hirodepa { /*広商デパートは文字数が多いため別枠*/
 		color: white;
 		padding: 0px 3px 0px 3px;
 		font-size: 14px;
 		margin-left: 10px;
 	}		
-		
+
+	.news .syouken { /*商業研究部*/
+		background-color: #9843a0;
+		padding: 0px 7px 0px 10px;
+		margin-left: 5px;
+		margin-right: -5px;
+	}
+	.news .syouken::before { 
+		content: " 商 研 部 ";	
+	}	
 
 	/*ラベルの色*/
 	.news .sns { /*SNS*/
@@ -129,10 +141,59 @@
 	}
 
 	
+
+
+
+	.news .instagram,
+	.news .x,
+	.news .facebook,
+	.news .tiktok,
+	.news .youtube{
+		position: relative;
+		display: inline-block; /* インラインブロック要素として表示 */
+		width: 30px; /* マークの幅 */
+		height: 30px; /* マークの高さ */
+		background-size: cover; /* 画像を枠に合わせて調整 */
+		left: 8px; /* 右の余白を設定 */
+		margin-top: -20px;
+		margin-left: 10px;
+		margin-right: 10px;
+		top:10px;
+	}
+	
+	.instagram {
+		background-image: url('../img/instagram.png'); /* マークのイメージファイル */
+	}
+	
+	.x {
+		background-image: url('../img/x.png'); /* マークのイメージファイル */
+	}
+	
+	.facebook {
+		background-image: url('../img/facebook.png'); /* マークのイメージファイル */
+	}	
+	
+	.tiktok {
+		background-image: url('../img/tiktok.png'); /* マークのイメージファイル */
+	}
+	
+	.youtube {
+		background-image: url('../img/youtube2.png'); /* マークのイメージファイル */
+	
+	}
+
+
+
+
+
+
+
+
 		
 		
 	@media screen and (max-width: 600px) {
 		/*ラベルの設定*/	
+		.news .syouken,
 		.news .sns,
 		.news .hirodepa,
 		.news .osirase,
@@ -176,3 +237,6 @@ newsクラスを継承したような形になる。追加の部分だけ書け�
 .news2 a:hover {
     color: red; /* ホバー時（マウスオーバー時）の色を赤に設定 */
 }
+
+
+

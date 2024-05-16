@@ -27,6 +27,15 @@
 	  z-index: 4;
 	}
 
+	#news_sns_ifr {		
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 2000px; /*ｐｃではiframeの高さ指定が必要だが、スマートフォンは自動で行うので設定の必要がない*/
+		width: 100%;	
+		z-index: 4;
+	  }
+
 
 	#news_ifr2 {		
 	  position: absolute;
@@ -70,6 +79,14 @@
 		width: 100%;
 		margin-bottom: 0px;
 	}	
+
+	.news_sns-container {
+		position:  relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		margin-bottom: 0px;
+	}		
 
 
 	.news-container2 {
@@ -296,7 +313,25 @@
 		table-layout : fixed;
 		max-width: 1000px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
-		height: 510px;
+		height: 410px;
+		margin-top: -10px;
+		margin-left: 20px;
+		scrollbar-width: thin; /* スクロールバーの幅 */
+    	scrollbar-color: #04b467 transparent; /* スクロールバーの色 */
+		margin-bottom: 50px;
+		/* line-height: 1.2; */
+		
+
+	}
+
+
+	.infobox_sns{
+		overflow-y: scroll;   /* 縦方向のスクロールのみ許可 */
+		overflow-x: hidden;   /* 横方向のスクロールを非表示にする */
+		table-layout : fixed;
+		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
+		height: 610px;
 		margin-top: -10px;
 		margin-left: 20px;
 		scrollbar-width: thin; /* スクロールバーの幅 */
@@ -362,7 +397,18 @@
 		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
 		margin-bottom: 40px;
-		height: 600px;
+		height: 500px;
+	}
+
+	#sec025 {
+		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
+		margin: 0 auto;  /* 画面の中央に配置 */
+		border: 0px solid #000; 
+		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
+		padding: 0px 30px 0px 30px; /*sec01内の余白*/
+		margin-bottom: 40px;
+		height: 700px;
 	}
 
 
@@ -673,6 +719,7 @@
 		margin-right: 10;
 	}
 
+
 	.label-hirodepa,
 	.label-osirase,
 	.label-gyouzi,
@@ -693,6 +740,8 @@
 	}
 
 
+
+	
 
 	.label-osirase { /*おしらせ*/
 		/*background-color: #35846c;*/
@@ -861,8 +910,13 @@
 		
 		.infobox {
 			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
-			height: 700px;
+			height: 470px;
 		}
+
+		.infobox_sns {
+			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
+			height: 470px;
+		}		
 
 		
 		.infobox .news {
@@ -935,9 +989,15 @@
 		#sec02 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 800px;
+			height: 570px;
 		}
-		
+
+		#sec025 {
+			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
+			padding: 0px 0px 0px 0px;
+			height: 570px;
+		}	
+
 		#sec03 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
