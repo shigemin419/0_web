@@ -59,20 +59,33 @@
 
 
 
-  .slide {
-        width: 100%; 
-        max-width: 235px;
-        /*margin: 10px auto;  /* 上下のmarginも調整 */
-		margin-top: 0px;
-		margin-left: 5px;
-		margin-bottom: 5px;
-        position: relative; 
-        display: block;  /* inline-blockからblockに変更 */
-        /*box-shadow: 2px 0px 5px 2px rgba(0, 0, 0, 0.4); */
-	  
-    }
 
+
+
+	  
+
+	  .slide {
+		width: calc(25% - 20px);  /* 幅を調整して4列表示 */
+		max-width: 235px;  /* ここはそのまま */
+		margin: 3px;  /* マージンを調整 */
+		position: relative; 
+		display: block;
+	}
 		
+
+	@media screen and (max-width: 900px) {
+		.slide {
+			width: calc(50% - 20px);  /* 2列の表示 */
+		}
+	}
+	
+	@media screen and (max-width: 600px) {
+		.slide {
+			width: calc(100% - 20px);  /* 1列の表示 */
+		}
+	}
+
+
 	.date-label{
 		position: absolute;
 		top: 0;
@@ -91,7 +104,8 @@
 	.slide:hover .date-label{		
 		opacity: 0.7;  /* スライドとラベルの透明度を0.7に設定 */
 	}		
-		
+	
+	.label-syoukenbu,
 	.label-hirodepa,	
 	.label-osirase,
 	.label-gyouzi,
@@ -108,11 +122,18 @@
 		color: white; /* テキストの色を白色に設定 */
 		text-align: center; /* テキストを水平方向に中央寄せ */
 		font-size: 14px;
+		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影を追加 */
 	}
 		
 			
 		
-		
+	.label-syoukenbu { /*商研部*/
+		/*background-color: #dc4848;*/
+		background-color: rgba(220, 72, 72, 0.9);
+	}
+	.label-syoukenbu::before { 
+		content: "商 研 部";
+	}		
 
 	.label-osirase { /*おしらせ*/
 		/*background-color: #35846c;*/
@@ -237,7 +258,73 @@
 		justify-content: center;
 		align-items: center;
 		/*font-weight: bolder;*/
-	}				
+	}	
+	.text-wakumozi-b { /*淵が灰色*/
+		position: absolute;
+		color: white; /* 文字色を白に設定 */
+		font-weight: bold; /* 文字の太さ */
+		text-shadow: 
+			-2px -2px 0 #555,  
+			 2px -2px 0 #555,
+			-2px 2px 0 #555,
+			 2px 2px 0 #555,
+			-4px -4px 0 #555,  
+			 4px -4px 0 #555,
+			-4px 4px 0 #555,
+			 4px 4px 0 #555; /* 灰色の縁取りを広くする */
+		z-index: 5; /* 他の要素より前面に表示 */
+	}
+	
+	.text-wakumozi-a {/*淵がピンク*/
+		position: absolute;
+		color: white; /* 文字色を白に設定 */
+		font-weight: bold; /* 文字の太さ */
+		text-shadow: 
+			-2px -2px 0 #ff3399,  
+			 2px -2px 0 #ff3399,
+			-2px 2px 0 #ff3399,
+			 2px 2px 0 #ff3399,
+			-4px -4px 0 #ff3399,  
+			 4px -4px 0 #ff3399,
+			-4px 4px 0 #ff3399,
+			 4px 4px 0 #ff3399; /* ピンク色の縁取りを広くする */
+		z-index: 5; /* 他の要素より前面に表示 */
+	}
+
+
+	.slide .x,
+	.slide .youtube,
+	.slide .facebook,
+	.slide .tiktok,
+	.slide .instagram {
+		position: absolute;
+		top: 0px; /* 位置を調整 */
+		right: 0px; /* 位置を調整 */
+		width: 40px; /* ロゴの幅を設定 */
+		height: 40px; /* ロゴの高さを設定 */
+		background-size: contain; /* 画像のサイズを調整 */
+		z-index: 10; /* 他の要素より前面に表示 */
+	}	
+
+	.tiktok {
+		background: url('img/tiktok.png') no-repeat;
+	}	
+
+	.instagram {
+		background: url('img/instagram.png') no-repeat;
+	}	
+
+	.x {
+		background: url('img/x.png') no-repeat;
+	}	
+	
+	.facebook {
+		background: url('img/facebook.png') no-repeat;
+	}	
+	
+	.youtube {
+		background: url('img/youtube.png') no-repeat;
+	}		
 
     </style>
 	
@@ -273,7 +360,8 @@
 						<a href="https://www.instagram.com/p/C7BaOvpSLW8/" target="_parent">
 							<img src="SNS/R6-05-17-2.jpg">
 							<div class="date-label">R6/05/17</div>
-							<div class="label-osirase"></div>
+							<span class="instagram"></span>
+							<!-- <div class="label-osirase"></div> -->
 							<!-- <div class="slide-label2">本校から４名の生徒がＨＹＥＣに出場</div> -->
 						</a>
 					</div>
@@ -282,11 +370,12 @@
 	
 
 					<div class="slide">
-						<a href="pdf.html?img=pdf/R5_entre_kouryuu.jpg&size=80&max_width=1000&name=アントレ交流会" target="_parent">
+						<a href="https://www.instagram.com/p/C7BcDYmS2SA/" target="_parent">
 							<img src="SNS/R6-05-17-1.jpg">
-							<div class="date-label">R6/03/27</div>
-							<div class="label-osirase"></div>
-							<div class="slide-label2">中高大アントレ交流会</div>
+							<div class="date-label">R6/05/17</div>
+							<span class="instagram"></span>
+							<!-- <div class="label-osirase"></div> -->
+							<!-- <div class="slide-label2">中高大アントレ交流会</div> -->
 						</a>
 					</div>
 
@@ -294,53 +383,54 @@
 
 
 					<div class="slide">
-						<a href="pdf.html?img=pdf/sinbun.jpg&size=70" target="_parent">
+						<a href="https://www.instagram.com/p/C6-4EX9LIjD/" target="_parent">
 							<img src="SNS/R6-05-16-3.jpg">
-							<div class="date-label">R6/03/14</div>
-							<div class="label-osirase"></div>
-							<div class="slide-label2">中国新聞「広場」「読書」欄に掲載された<br>本校生徒の作文</div>
-						</a>
+							<div class="date-label">R6/05/16</div>
+							<div class="text-wakumozi-b" style="top: 100px; left: 20px; font-size: 28px;">とよひらいぶ</div>
+							<div class="text-wakumozi-b" style="top: 150px; left: 40px; font-size: 24px;">実行委員会</div>
+							<span class="instagram"></span>
+							<div class="label-syoukenbu"></div>
+							</a>
 					</div>
 
  
 					<div class="slide">
-						<a href="event/hyousyousiki2023/hyousyousiki.html" target="_parent">
+						<a href="https://www.instagram.com/p/C68qJbdyvf-/" target="_parent">
 							<img src="SNS/R6-05-16-2.jpg">
-							<div class="date-label">R6/03/13</div>
-							<div class="label-gyouzi"></div>
-							<div class="slide-label">表彰式のページを追加しました。</div>
+							<div class="date-label">R6/05/16</div>
+							<span class="instagram"></span>
 						</a>
 					</div>
 
 					
 
 					<div class="slide">
-						<a href="event/sotugyousiki2023/sotugyousiki.html" target="_parent">
+						<a href="https://www.instagram.com/p/C6-scx_yfwq/" target="_parent">
 							<img src="SNS/R6-05-16-1.jpg">
-							<div class="date-label">R6/03/13</div>
-							<div class="label-gyouzi"></div>
-							<div class="slide-label">卒業式のページを追加しました。</div>
+							<div class="date-label">R6/05/16</div>
+							<span class="instagram"></span>
 						</a>
 					</div>
 
 			
 				
 					<div class="slide">
-						<a href="club/clubimg.html?img1=imgpdf/interact.jpg&img2=imgpdf/interact_s.jpg&size1=100&size2=90&name=インターアクト" target="_parent">
+						<a href="https://www.instagram.com/p/C68gSKZyCP9/" target="_parent">
 							<img src="SNS/R6-05-15-1.jpg">
-							<div class="date-label">R6/02/20</div>
-							<div class="label-bukatu"></div>
-							<div class="slide-label2">インターアクト部のページを更新しました</div>
+							<div class="date-label">R6/05/15</div>
+							<span class="instagram"></span>
 						</a>
 					</div>
 
 		
 					<div class="slide">
-						<a href="SNS/R6-05-14-1.jpg" target="_parent">
+						<a href="https://www.instagram.com/p/C68aPv5P8B7/" target="_parent">
 							<img src="SNS/R6-05-14-1.jpg">
-							<div class="date-label">R6/02/07</div>
-							<div class="label-osirase"></div>
-							<div class="slide-label2">「南の風 EBAあそび」に広商デパート<br>と広商応援部が参加しました。</div>
+							<div class="date-label">R6/05/14</div>
+							<div class="text-wakumozi-a" style="top: 100px; left: 20px; font-size: 26px;">とよひらいぶ</div>
+							<div class="text-wakumozi-a" style="top: 150px; left: 30px; font-size: 20px;">部長メッセージ</div>						
+							<div class="label-syoukenbu"></div>
+							<span class="instagram"></span>
 						</a>
 					</div>
 
@@ -348,11 +438,10 @@
 
  
 					<div class="slide">
-						<a href="SNS/R6-05-14-2.jpg" target="_parent">
+						<a href="https://www.instagram.com/p/C65uJOayluy/" target="_parent">
 							<img src="SNS/R6-05-13-2.jpg">
-							<div class="date-label">R6/02/07</div>
-							<div class="label-osirase"></div>
-							<div class="slide-label2">本校生徒が第165回 日商簿記１級<br>に合格しました。</div>
+							<div class="date-label">R6/05/13</div>
+							<span class="instagram"></span>
 						</a>
 					</div>
 
@@ -361,355 +450,78 @@
 
 			
 					<div class="slide">
-						<a href="club/clubimg.html?img1=imgpdf/kyuudou.jpg&img2=imgpdf/kyuudou_s.jpg&size1=100&size2=90&name=弓道部" target="_parent">
+						<a href="https://www.instagram.com/p/C65u08Lyx1g/" target="_parent">
 							<img src="SNS/R6-05-13-1.jpg">
-							<div class="date-label">R6/01/31</div>
-							<div class="label-bukatu"></div>
-							<div class="slide-label2">弓道部のページを更新しました</div>
+							<div class="date-label">R6/05/13</div>
+							<span class="instagram"></span>
 						</a>
 					</div>
-									
-					<div class="slide">
-						<a href="club/clubimg.html?img1=imgpdf/photoclub.jpg&img2=imgpdf/photoclub_s.jpg&size1=100&size2=90&name=バレーボール部" target="_parent">
-							<img src="SNS/R6-05-13-2.jpg">
-							<div class="date-label">R6/01/30</div>
-							<div class="label-bukatu"></div>
-							<div class="slide-label2">写真部のページを更新しました</div>
-						</a>
-					</div>
-	
+			
 	
 				
 					<div class="slide">
-					   <a href="club/clubimg.html?img1=imgpdf/keiongaku.jpg&img2=imgpdf/keiongaku_s.jpg&size1=100&size2=90&name=バレーボール部" target="_parent">
+					   <a href="https://www.instagram.com/p/C6zrWgdSCw-/" target="_parent">
 						   <img src="SNS/R6-05-11-1.jpg">
-						   <div class="date-label">R6/01/30</div>
-						   <div class="label-bukatu"></div>
-						   <div class="slide-label2">軽音学部のページを更新しました</div>
+						   <div class="date-label">R6/05/11</div>
+						   <span class="instagram"></span>
 					   </a>
 				   </div>
 
 		
 				<div class="slide">
-					<a href="pdf.html?img=pdf/R5_WYEC_NY.jpg&size=95&size2=90&name=WYEC" target="_parent">
+					<a href="https://www.instagram.com/p/C6xwRRkyMQl/" target="_parent">
 						<img src="SNS/R6-05-10-3.jpg">
-						<div class="date-label">R5/12/22</div>
-						<div class="label-osirase"></div>
-						<div class="slide-label2">本校生徒がニューヨークで開催された<br>ＷＹＥＣに出場しました。</div>
-					</a>
+						<div class="date-label">R6/05/10</div>
+						<span class="instagram"></span>
+						</a>
 				</div>
 
 
 				<div class="slide">
-					<a href="pdf.html?img=pdf/R5_zeirisi_siken.jpg&size=80" target="_parent">
+					<a href="https://www.instagram.com/p/C6xw8HxSzhV/" target="_parent">
 						<img src="SNS/R6-05-10-2.jpg">
-						<div class="date-label">R5/12/21</div>
-						<div class="label-osirase"></div>
-						<div class="slide-label2">本校生徒が令和５年度（第73回）<br>税理士試験 簿記論に合格しました。</div>
+						<div class="date-label">R6/05/10</div>
+						<span class="instagram"></span>
 					</a>
 				</div>
 
 
 				<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/volleyball.jpg&img2=imgpdf/volleyball_s.jpg&size1=100&size2=90&name=バレーボール部" target="_parent">
+                    <a href="https://www.instagram.com/p/C6yAmmFSQEs/" target="_parent">
                         <img src="SNS/R6-05-10-1.jpg">
-						<div class="date-label">R5/12/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label2">バレーボール部のページを更新しました</div>
+						<div class="date-label">R6/05/10</div>
+						<!-- <div class="text-wakumozi-a" style="top: 100px; left: 20px; font-size: 28px;">とよひらいぶ</div>
+						<div class="text-wakumozi-a" style="top: 150px; left: 40px; font-size: 24px;">ポスター</div>						 -->
+                        <div class="label-syoukenbu"></div>
+						<span class="instagram"></span>
                     </a>
                 </div>					
 
 
-	           	<div class="slide">
-                    <a href="html_ifr.html?html=hirodepa/tenpo/index.php&height=5800&height_s=3150" target="_parent">
-                        <img src="topic/0_tenpo.jpg">
-						<div class="date-label">R5/11/17</div>
-                        <div class="label-hirodepa"></div>
-                        <div class="slide-label">第41回 広商デパート 店舗紹介</div>
-						<!-- 1行のときslide-label：２行のときslide-label2 -->
-                    </a>
-                </div>		
-	
-
-           		<div class="slide">
-                    <a href="pdf.html?img=hokenshitsu/R5_mental_kouenkai.jpg&size=70" target="_parent">
-                        <img src="topic/0_mental.jpg">
-						<div class="date-label">R5/11/14</div>
-                        <div class="label-gyouzi"></div>
-                        <div class="slide-label">令和５年度 メンタルヘルス講演会</div>
-                    </a>
-                </div>
-					
- 
-           		<div class="slide">
-                    <a href="pdf.html?img=pdf/sinbun.jpg&size=70" target="_parent">
-                        <img src="topic/0_sinbun.jpg">
-						<div class="date-label">R5/11/10</div>
-                        <div class="label-osirase"></div>
-                        <div class="slide-label2">中国新聞「広場」欄に掲載された<br>本校生徒の作文</div>
-                    </a>
-                </div>
-	
-	
-					
-	
-	
 				<div class="slide">
-                    <a href="pdf.html?img=pdf/R5_specialist.jpg" target="_parent">
-                        <img src="topic/0_specialist.jpg">
-						<div class="date-label">R5/10/24</div>
-                        <div class="label-osirase"></div>
-                        <div class="slide-label">第23回 広島県高校生スペシャリストの祭典ポスターを追加しました</div>
-                    </a>
-                </div>		
-	
- 
-           		<div class="slide">
-                    <a href="pdf.html?img=pdf/R5_sotugyousei_taikendan.jpg" target="_parent">
-                        <img src="topic/0_sotugyousei_taikendan.jpg">
-						<div class="date-label">R5/10/10</div>
-                        <div class="label-gyouzi"></div>
-                        <div class="slide-label">卒業生の体験を聞く会を追加しました</div>
-                    </a>
-                </div>
-	
-	
- 
+					<a href="https://www.instagram.com/p/C6vPaphSA8_/?igsh=MWk2YnJ1aW9sdWdsYg%3D%3D&utm_source=qr%2F&img_index=1" target="_parent">
+						<img src="SNS/R6-05-09-2.jpg">
+						<div class="date-label">R6/05/09</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
 				
-				
-				
-	
-	           	<div class="slide">
-                    <a href="html_ifr.html?html=event/openschool2023-2/openschool.html&height=5800&height_s=3150" target="_parent">
-                        <img src="topic/0_openschool2.jpg">
-						<div class="date-label">R5/09/11</div>
-                        <div class="label-osirase"></div>
-                        <div class="slide-label">第２回 オープンスクール(10/14)</div>
-						<!-- 1行のときslide-label：２行のときslide-label2 -->
-                    </a>
-                </div>
-	
-	
-            	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/baseball.jpg&img2=imgpdf/baseball_s.jpg&size1=100&size2=90&name=硬式野球部" target="_parent">
-                        <img src="topic/03.jpg">
-						<div class="date-label">R5/08/31</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">硬式野球部のページを更新しました</div>
-                    </a>
-                </div>		
-					
-			
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/baton.jpg&img2=imgpdf/baton_s.jpg&size1=100&size2=90&videoId=Br0wq2LfGtw&videoTitle=部活動紹介動画&name=バトン部" target="_parent">
-                        <img src="topic/0_baton.jpg">
-						<div class="date-label">R5/08/23</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">バトン部のページを更新しました</div>
-                    </a>
-                </div>
-				
- 
-	
+
 				<div class="slide">
-                    <a href="hirodepa/hirodepa.html" target="_parent">
-                        <img src="topic/0_kabunusi.jpg">
-						<div class="date-label">R5/08/03</div>
-                        <div class="label-hirodepa"></div>
-                        <div class="slide-label">広商デパートのページを追加しました</div>
-                    </a>
-                </div>
-	
-	
-			
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/kendou.jpg&img2=imgpdf/kendou_s.jpg&size1=100&size2=90&name=剣道部" target="_parent">
-                        <img src="topic/0_kendou.jpg">
-						<div class="date-label">R5/08/03</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">剣道部のページを更新しました</div>
-                    </a>
-                </div>
-	
-			
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/housou.jpg&img2=imgpdf/housou_s.jpg&size1=100&size2=90&name=放送部" target="_parent">
-                        <img src="topic/0_housou.jpg">
-						<div class="date-label">R5/07/25</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">放送部のページを更新しました</div>
-                    </a>
-                </div>
-
+					<a href="https://www.instagram.com/p/C6vdFhjyU4F/" target="_parent">
+						<img src="SNS/R6-05-09-1.jpg">
+						<div class="date-label">R6/05/09</div>
+						<span class="instagram"></span>
+					</a>
+				</div>			
 				
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/softball.jpg&img2=imgpdf/softball_s.jpg&size1=100&size2=90&name=ソフトバール部" target="_parent">
-                        <img src="topic/0_softball.jpg">
-						<div class="date-label">R5/07/25</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label2">ソフトボール部のページを更新しました</div>
-                    </a>
-                </div>
-			
-	
-	
-	           	<div class="slide">
-                    <a href="html_ifr.html?html=event/openschool2023/link2.html&height=1700&height_s=1100" target="_parent">
-                        <img src="topic/01.jpg">
-						<div class="date-label">R5/07/20</div>
-                        <div class="label-osirase"></div>
-                        <div class="slide-label">オープンスクール申し込み(7/25まで)</div>
-						<!-- 1行のときslide-label：２行のときslide-label2 -->
-                    </a>
-                </div>
-	
-				</div>		  
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/syougyoukenkyu.jpg&img2=imgpdf/syougyoukenkyu.jpg&size1=100&size2=90&name=商業研究部" target="_parent">
-                        <img src="topic/05.jpg">
-						<div class="date-label">R5/04/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">商業研究部のページを更新しました</div>
-                    </a>
-                </div>					
-
-				
-					
-				
- 
- 	  
-				
-	
-            	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/jyouhou.jpg&img2=imgpdf/jyouhou_s.jpg&size1=100&size2=90&videoId=ReZq7M6spY8&videoTitle=部活動風景&name=情報部" target="_parent">
-                        <img src="topic/02.jpg">
-						<div class="date-label">R5/07/12</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">情報処理部のページを更新しました</div>
-                    </a>
-                </div>	
-	
-	
 				<div class="slide">
-                    <a href="pdf.html?img=pdf/R5_seikyouiku.jpg" target="_parent">
-                        <img src="topic/seikyouiku.jpg">
-						<div class="date-label">R5/07/19</div>
-                        <div class="label-gyouzi"></div>
-                        <div class="slide-label">性教育講演会を追加しました</div>
-                    </a>
-                </div>			
- 	
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/basketball_f.jpg&img2=imgpdf/basketball_f_s.jpg&size1=100&size2=90&videoId=DMDLbs2E4wQ&videoTitle=活動の様子&name=女子バスケットボール部" target="_parent">
-                        <img src="topic/0_basketball_f.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label2">女子バスケットボール部のページを更新しました</div><!--２行の説明文-->
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/brass.jpg&img2=imgpdf/brass_s.jpg&size1=100&size2=90&name=吹奏楽部" target="_parent">
-                        <img src="topic/0_brass.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">吹奏楽部のページを更新しました</div>
-                    </a>
-                </div>		
-
-				
-     					
-				
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/Calligraphy.jpg&img2=imgpdf/Calligraphy_s.jpg&size1=100&size2=90&name=書道部" target="_parent">
-                        <img src="topic/0_Calligraphy.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">書道部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/Cheerleading.jpg&img2=imgpdf/Cheerleading_s.jpg&size1=100&size2=90&name=応援部" target="_parent">
-                        <img src="topic/0_Cheerleading.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">応援部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/cooking.jpg&img2=imgpdf/cooking_s.jpg&size1=100&size2=90&name=調理部" target="_parent">
-                        <img src="topic/0_cooking.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">調理部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/english.jpg&img2=imgpdf/english_s.jpg&size1=100&size2=90&name=英会話部" target="_parent">
-                        <img src="topic/0_english.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">英会話部のページを更新しました</div>
-                    </a>
-                </div>		
-
-			
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/rikujyou.jpg&img2=imgpdf/rikujyou_s.jpg&size1=100&size2=90&videoId=ZE5OXCGIPiU&videoTitle=部活動紹介&name=陸上部" target="_parent">
-                        <img src="topic/0_rikujyou.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">陸上競技部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/softtennis.jpg&img2=imgpdf/softtennis_s.jpg&size1=100&size2=90&name=ソフトテニス部" target="_parent">
-                        <img src="topic/0_softtennis.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label2">ソフトテニス部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/soukyoku.jpg&img2=imgpdf/soukyoku_s.jpg&size1=100&size2=90&videoId=GqyXNE4n2aI&videoTitle=部活動風景&name=筝曲部" target="_parent">
-                        <img src="topic/0_soukyoku.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">筝曲部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/tabletennis.jpg&img2=imgpdf/tabletennis_s.jpg&size1=100&size2=90&name=卓球部" target="_parent">
-                        <img src="topic/0_tabletennis.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">卓球部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-             	<div class="slide">
-                    <a href="club/clubimg.html?img1=imgpdf/tea.jpg&img2=imgpdf/tea_s.jpg&size1=100&size2=90&name=茶道部" target="_parent">
-                        <img src="topic/0_tea.jpg">
-						<div class="date-label">R5/07/21</div>
-                        <div class="label-bukatu"></div>
-                        <div class="slide-label">茶道部のページを更新しました</div>
-                    </a>
-                </div>		
-				
-				<div class="footer-container">
-					<iframe id="ifr2" src="https://www.hiroshima-ch.hiroshima-c.ed.jp/footer.html" frameborder="0"  scrolling="no"></iframe>
-				</div>				
-				
+					<a href="https://www.instagram.com/p/C6s1U4oSm8r/" target="_parent">
+						<img src="SNS/R6-05-08-2.jpg">
+						<div class="date-label">R6/05/08</div>
+						<span class="instagram"></span>
+					</a>
+				</div>						
     
 </body>
 </html>
