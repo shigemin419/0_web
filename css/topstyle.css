@@ -635,14 +635,23 @@
 		color: inherit; 
 	}		
 
-
-
+	.sns-img {
+		width: 100%;
+		max-width: 250px;
+		display: block;
+		margin: 0 auto; /* 画像を中央に配置 */ 
+		
+	}
 	.custom-img {
 		width: 100%;
 		display: block;
 		margin: 0 auto; /* 画像を中央に配置 */ 
 		
 	}
+
+
+
+
 
 	.cont-text {
 		display: block;
@@ -888,6 +897,8 @@
 			width: 100% !important; /* 強制的に箱いっぱいに画像幅を広げる。 */
 			height: auto !important; /* アスペクト比を維持 */
 		}		
+
+
 		.cont-text2 {
 			padding: 5px 10px;
 			font-size: 13px;
