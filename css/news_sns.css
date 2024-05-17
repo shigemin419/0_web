@@ -1,0 +1,176 @@
+.content-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 970px; /* 高さを固定 */
+    overflow-y: auto; /* 縦方向にスクロールバーを表示 */
+    padding: 10px;
+    box-sizing: border-box;
+    border: none; /* 外枠を完全に削除 */
+}
+
+.slide-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 235px);
+    gap: 5px;
+    justify-content: center;
+    border: none; /* 外枠を完全に削除 */
+}
+
+.slide_sns {
+    width: 235px;
+    height: 235px;
+    position: relative;
+    display: block;
+    border: none; /* 外枠を完全に削除 */
+}
+
+.date-label_sns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 25px;
+    line-height: 27px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(124, 100, 4, 1);
+    border: none; /* 外枠を完全に削除 */
+}
+
+.slide_sns:hover .date-label_sns {
+    opacity: 0.7;
+}
+
+.slide_sns img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    border: none; /* 外枠を完全に削除 */
+}
+
+.slide_sns img:hover {
+    opacity: 0.7;
+}
+
+
+     /* スクロールバーのスタイル */
+     .content-container::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .content-container::-webkit-scrollbar-thumb {
+        background-color: #00A15E; /* 画像と同じ緑色 */
+        border-radius: 10px;
+    }
+
+    .content-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+
+
+@media screen and (max-width: 1200px) {
+    .slide-wrapper {
+        grid-template-columns: repeat(3, 235px);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slide-wrapper {
+        grid-template-columns: repeat(2, 235px);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .slide-wrapper {
+        grid-template-columns: repeat(2, 200px);
+        gap: 5px;
+    }
+    .slide_sns {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.slide_sns .x,
+.slide_sns .youtube,
+.slide_sns .facebook,
+.slide_sns .tiktok,
+.slide_sns .instagram {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    z-index: 10;
+}
+
+.tiktok {
+    background: url('img/tiktok.png') no-repeat;
+}
+
+.instagram {
+    background: url('img/instagram.png') no-repeat;
+}
+
+.x {
+    background: url('img/x.png') no-repeat;
+}
+
+.facebook {
+    background: url('img/facebook.png') no-repeat;
+}
+
+.youtube {
+    background: url('img/youtube.png') no-repeat;
+}
+
+.label-syoukenbu,
+.label-hirodepa {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 80px;
+    height: 25px;
+    line-height: 27px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: none; /* 外枠を完全に削除 */
+}
+
+.label-syoukenbu {
+    background-color: rgba(220, 72, 72, 0.9);
+}
+
+.label-syoukenbu::before {
+    content: "商 研 部";
+}
+
+
+@media screen and (max-width: 650px) {
+    .content-container {
+        max-height: 470px; /* 高さを300pxに変更 */
+    }
+    .slide-wrapper {
+        grid-template-columns: repeat(2, 200px);
+        gap: 5px;
+    }
+    .slide_sns {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .label-syoukenbu {
+        left: 0px;
+        top: 25px;
+    }
+
+
+
+}

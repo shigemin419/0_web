@@ -79,11 +79,12 @@
 		}
 	}
 	
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 650px) {
 		.slide {
 			width: calc(50% - 20px);  /* 2列の表示 */
 			max-width: 180px;  /* 必要に応じてmax-widthを調整 */
 		}
+
 	}
 
 
@@ -135,6 +136,17 @@
 	.label-syoukenbu::before { 
 		content: "商 研 部";
 	}		
+
+		
+
+	/* 650px以下の画面幅で位置を変更 */
+	@media screen and (max-width: 650px) {
+		.label-syoukenbu {
+			left: 0px;
+			top: 25px;
+		}
+	}
+
 
 	.label-osirase { /*おしらせ*/
 		/*background-color: #35846c;*/
@@ -342,8 +354,17 @@
 			});
 		});
    </script>	
-	
-	
+		
+	<script>
+		// iframeの高さを親ウィンドウに知らせる
+		function sendHeight() {
+			const height = document.body.scrollHeight;
+			parent.postMessage({ height: height }, window.location.origin);
+		}
+
+		window.addEventListener('load', sendHeight);
+		window.addEventListener('resize', sendHeight);
+	</script>	
 	
 	
 </head>
@@ -389,8 +410,8 @@
 						<a href="https://www.instagram.com/p/C6-4EX9LIjD/" target="_parent">
 							<img src="SNS/R6-05-16-3.jpg">
 							<div class="date-label">R6/05/16</div>
-							<div class="text-wakumozi-b" style="top: 100px; left: 20px; font-size: 28px; transform: rotate(-7deg);">とよひらいぶ</div>
-							<div class="text-wakumozi-b" style="top: 150px; left: 50px; font-size: 24px; transform: rotate(-7deg);">実行委員会</div>
+							<!-- <div class="text-wakumozi-b" style="top: 100px; left: 20px; font-size: 28px; transform: rotate(-7deg);">とよひらいぶ</div>
+							<div class="text-wakumozi-b" style="top: 150px; left: 50px; font-size: 24px; transform: rotate(-7deg);">実行委員会</div> -->
 							<span class="instagram"></span>
 							<div class="label-syoukenbu"></div>
 							</a>
@@ -402,7 +423,7 @@
 							<img src="SNS/R6-05-16-2.jpg">
 							<div class="date-label">R6/05/16</div>
 							<span class="instagram"></span>
-							<div class="text-wakumozi-a" style="top: 145px; left: 20px; font-size: 22px; transform: rotate(-5deg);">オープンスクール</div>
+							<!-- <div class="text-wakumozi-a" style="top: 145px; left: 20px; font-size: 22px; transform: rotate(-5deg);">オープンスクール</div> -->
 	
 						</a>
 					</div>
@@ -495,8 +516,8 @@
                     <a href="https://www.instagram.com/p/C6yAmmFSQEs/" target="_parent">
                         <img src="SNS/R6-05-10-1.jpg">
 						<div class="date-label">R6/05/10</div>
-						<div class="text-wakumozi-a" style="top: 100px; left: 20px; font-size: 24px;">とよひらいぶ</div>
-						<div class="text-wakumozi-a" style="top: 150px; left: 40px; font-size: 22px;">ポスター</div>
+						<!-- <div class="text-wakumozi-a" style="top: 100px; left: 20px; font-size: 24px;">とよひらいぶ</div>
+						<div class="text-wakumozi-a" style="top: 150px; left: 40px; font-size: 22px;">ポスター</div> -->
                         <div class="label-syoukenbu"></div>
 						<span class="instagram"></span>
                     </a>
