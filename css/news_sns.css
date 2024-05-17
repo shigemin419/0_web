@@ -156,7 +156,7 @@ background: #f1f1f1;
 
 @media screen and (max-width: 650px) {
 .content-container {
-    max-height: 470px; /* 高さを300pxに変更 */
+    max-height: 570px; /* 高さを300pxに変更 */
 
 }
 .slide-wrapper {

@@ -926,7 +926,7 @@
 
 		.infobox_sns {
 			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
-			height: 470px;
+			height: 570px;
 		}		
 
 		
@@ -1006,7 +1006,7 @@
 		#sec025 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 570px;
+			height: 670px;
 		}	
 
 		#sec03 {
