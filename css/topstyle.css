@@ -331,7 +331,7 @@
 		table-layout : fixed;
 		max-width: 1000px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
-		height: 910px;
+		height: 960px;
 		margin-top: -10px;
 		margin-left: 20px;
 		scrollbar-width: thin; /* スクロールバーの幅 */
@@ -408,7 +408,7 @@
 		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
 		margin-bottom: 40px;
-		height: 1020px;
+		height: 1070px;
 	}
 
 

@@ -6,6 +6,7 @@
     padding: 10px;
     box-sizing: border-box;
     border: none; /* 外枠を完全に削除 */
+    margin-top :-10px;
 }
 
 .slide-wrapper {
@@ -56,19 +57,19 @@
 }
 
 
-     /* スクロールバーのスタイル */
-     .content-container::-webkit-scrollbar {
-        width: 7px;
-    }
+/* スクロールバーのスタイル */
+.content-container::-webkit-scrollbar {
+width: 7px;
+}
 
-    .content-container::-webkit-scrollbar-thumb {
-        background-color: #00A15E; /* 画像と同じ緑色 */
-        border-radius: 10px;
-    }
+.content-container::-webkit-scrollbar-thumb {
+background-color: #00A15E; /* 画像と同じ緑色 */
+border-radius: 10px;
+}
 
-    .content-container::-webkit-scrollbar-track {
-        background: #f1f1f1;
-    }
+.content-container::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
 
 
 
@@ -110,23 +111,23 @@
 }
 
 .tiktok {
-    background: url('img/tiktok.png') no-repeat;
+    background: url('../img/tiktok.png') no-repeat;
 }
 
 .instagram {
-    background: url('img/instagram.png') no-repeat;
+    background: url('../img/instagram.png') no-repeat;
 }
 
 .x {
-    background: url('img/x.png') no-repeat;
+    background: url('../img/x.png') no-repeat;
 }
 
 .facebook {
-    background: url('img/facebook.png') no-repeat;
+    background: url('../img/facebook.png') no-repeat;
 }
 
 .youtube {
-    background: url('img/youtube.png') no-repeat;
+    background: url('../img/youtube.png') no-repeat;
 }
 
 .label-syoukenbu,
@@ -154,23 +155,23 @@
 
 
 @media screen and (max-width: 650px) {
-    .content-container {
-        max-height: 470px; /* 高さを300pxに変更 */
-    }
-    .slide-wrapper {
-        grid-template-columns: repeat(2, 200px);
-        gap: 5px;
-    }
-    .slide_sns {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .label-syoukenbu {
-        left: 0px;
-        top: 25px;
-    }
+.content-container {
+    max-height: 470px; /* 高さを300pxに変更 */
 
+}
+.slide-wrapper {
+    grid-template-columns: repeat(2, 200px);
+    gap: 5px;
+}
+.slide_sns {
+    width: 200px;
+    height: 200px;
+}
+
+.label-syoukenbu {
+    left: 0px;
+    top: 25px;
+}
 
 
 }
