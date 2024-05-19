@@ -887,9 +887,16 @@
 
 	@media screen and (max-width: 700px) {
 
+		.news-container {
+			width: 100vw !important;
+		}
+
 		.cont-item {
-			width: 290px;  
-			height: 310px;
+			/* width: 290px;  
+			height: 310px; */
+			width: 85vw;
+			height: calc(85vw * 1.07); 
+
 		}		
 
 
@@ -926,7 +933,7 @@
 
 		.infobox_sns {
 			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
-			height: 570px;
+			height: 470px;
 		}		
 
 		
@@ -998,15 +1005,16 @@
 		
 		
 		#sec02 {
-			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
-			padding: 0px 0px 0px 0px;
+			/*width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
+			width: calc(100% - 80px);
 			height: 570px;
 		}
 
 		#sec025 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 77vh; /*バックの緑色の範囲*/
+			height: 770px; 
+			/*max-height: calc(100vw+30px); /* バックの緑色の高さ */
 		}	
 
 		#sec03 {
@@ -1142,3 +1150,10 @@
 		transform: translateX(-50%); /* これにより動画が中央になります */
 		margin-bottom: 20px;
 	}
+
+
+
+
+
+
+

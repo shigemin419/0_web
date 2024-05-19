@@ -1,0 +1,306 @@
+	.news a {
+		text-decoration: none;  /*リンクのアンダーラインなし*/
+	}
+ 	
+		
+	.news {
+		border-bottom: none;  /* 線を削除 */
+		text-align: left;  /* 文字を左寄せにする */
+		margin-top: 2px; /*文字の高さ*/
+		line-height: 1.4; /* 行の高さを変える。行間の高さを調整 */
+		padding: 0px 0px 0px 0px;
+	}
+
+	.news::after {
+		content: '';
+		display: inline-block;
+		width: 95%;  /* 線の長さを80%に設定 */
+		border-bottom: 1px solid #3caaff;  /* 線の色を#3caaffに、太さを2pxに設定 */
+		position: relative;
+		bottom: 3px;  /* 線の高さ位置を調整 */
+		margin:  auto;  /* 左右中央寄せにする */
+		left: 0px;  /* 左側からの位置を10%に設定 */
+
+	}
+
+	.news:hover {
+		opacity: 0.7;
+	}
+
+	
+
+	.news .date {
+		margin-left: 10px;
+		color: #1d1d1e;
+		font-weight: bold;
+		font-size: 14px;
+
+
+	}
+
+
+		
+	/*ラベルの設定*/
+	.news .osirase,
+	.news .bukatu,
+	.news .gyouzi,
+	.news .tayori,	
+	.news .syougaku{
+		color: white;
+		padding: 0px 10px 0px 10px;
+		font-size: 14px;
+		margin-left: 10px;
+	}
+
+	.news .hirodepa { /*広商デパートは文字数が多いため別枠*/
+		color: white;
+		padding: 0px 3px 0px 3px;
+		font-size: 14px;
+		margin-left: 10px;
+	}		
+		
+
+	/*ラベルの色*/
+	.news .osirase { /*おしらせ*/
+		background-color: #35846c;
+	}
+	.news .osirase::before { 
+		content: "おしらせ";
+	}		
+		
+	.news .bukatu { /*部 活 動*/
+		background-color: #9843a0;
+	}
+	.news .bukatu::before { 
+		content: " 部 活 動 ";
+	}		
+
+	.news .gyouzi { /*学校行事*/
+		background-color: #dc674c;
+	}
+	.news .gyouzi::before { 
+		content: "学校行事";
+	}		
+
+	.news .syougaku { /*奨 学 金*/
+		background-color: #a58b23;
+	}
+	.news .syougaku::before { 
+		content: " 奨 学 金 ";
+	}		
+
+	.news .tayori { /*たより*/
+		background-color: #7ea006;
+	}
+	.news .tayori::before { 
+		content: " た よ り ";
+	}		
+
+	.news .hirodepa { /*広デパ*/
+		background-color: #7278fc
+	}
+	.news .hirodepa::before { 
+		content: "広商ﾃﾞﾊﾟｰﾄ";
+	}			
+	
+		
+	.news .naiyou {
+
+		color: #000;
+		font-size: 14px;
+		margin-left: 10px;
+
+
+	}
+
+
+
+	.news:last-child{
+		border-bottom: none;  /* 最後の要素は線を削除 */
+	}
+
+	
+		
+		
+	@media screen and (max-width: 600px) {
+		/*ラベルの設定*/	
+		
+		.news .hirodepa,
+		.news .osirase,
+		.news .bukatu,
+		.news .gyouzi,
+		.news .tayori,	
+		.news .syougaku{
+
+			padding: 3px 10px 3px 10px;
+			/*margin-left: 5px;*/
+
+		}	
+		
+		.news .hirodepa { 
+			padding: 3px 2px 3px 2px;
+		}		
+		
+
+	}
+
+/********************************************************************************/
+
+.news2 a {
+	text-decoration: none;  /*リンクのアンダーラインなし*/
+}
+ 
+	
+.news2 {
+	border-bottom: none;  /* 線を削除 */
+	text-align: left;  /* 文字を左寄せにする */
+	margin-top: 2px; /*文字の高さ*/
+	line-height: 1.4; /* 行の高さを変える。行間の高さを調整 */
+	padding: 0px 0px 0px 0px;
+}
+
+.news2::after {
+	content: '';
+	display: inline-block;
+	width: 95%;  /* 線の長さを80%に設定 */
+	border-bottom: 1px solid #3caaff;  /* 線の色を#3caaffに、太さを2pxに設定 */
+	position: relative;
+	bottom: 3px;  /* 線の高さ位置を調整 */
+	margin:  auto;  /* 左右中央寄せにする */
+	left: 0px;  /* 左側からの位置を10%に設定 */
+
+}
+
+/* .news2:hover {
+	opacity: 0.7;
+} */
+
+
+
+.news2 .date {
+	margin-left: 10px;
+	color: #1d1d1e;
+	font-weight: bold;
+	font-size: 14px;
+
+
+}
+
+
+	
+/*ラベルの設定*/
+.news2 .osirase,
+.news2 .bukatu,
+.news2 .gyouzi,
+.news2 .tayori,	
+.news2 .syougaku{
+	color: white;
+	padding: 0px 10px 0px 10px;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.news2 .hirodepa { /*広商デパートは文字数が多いため別枠*/
+	color: white;
+	padding: 0px 3px 0px 3px;
+	font-size: 14px;
+	margin-left: 10px;
+}		
+	
+
+/*ラベルの色*/
+.news2 .osirase { /*おしらせ*/
+	background-color: #35846c;
+}
+.news2 .osirase::before { 
+	content: "おしらせ";
+}		
+	
+.news2 .bukatu { /*部 活 動*/
+	background-color: #9843a0;
+}
+.news2 .bukatu::before { 
+	content: " 部 活 動 ";
+}		
+
+.news2 .gyouzi { /*学校行事*/
+	background-color: #dc674c;
+}
+.news2 .gyouzi::before { 
+	content: "学校行事";
+}		
+
+.news2 .syougaku { /*奨 学 金*/
+	background-color: #a58b23;
+}
+.news2 .syougaku::before { 
+	content: " 奨 学 金 ";
+}		
+
+.news2 .tayori { /*たより*/
+	background-color: #7ea006;
+}
+.news2 .tayori::before { 
+	content: " た よ り ";
+}		
+
+.news2 .hirodepa { /*広デパ*/
+	background-color: #7278fc
+}
+.news2 .hirodepa::before { 
+	content: "広商ﾃﾞﾊﾟｰﾄ";
+}			
+
+	
+.news2 .naiyou {
+
+	color: #000;
+	font-size: 14px;
+	margin-left: 10px;
+
+
+}
+
+
+
+.news2:last-child{
+	border-bottom: none;  /* 最後の要素は線を削除 */
+}
+
+
+	
+	
+@media screen and (max-width: 600px) {
+	/*ラベルの設定*/	
+	
+	.news2 .hirodepa,
+	.news2 .osirase,
+	.news2 .bukatu,
+	.news2 .gyouzi,
+	.news2 .tayori,	
+	.news2 .syougaku{
+
+		padding: 3px 10px 3px 10px;
+		/*margin-left: 5px;*/
+
+	}	
+	
+	.news2 .hirodepa { 
+		padding: 3px 2px 3px 2px;
+	}		
+	
+
+}
+
+.news2 a:link, /* 未訪問リンク */
+.news2 a:visited, /* 訪問済みリンク */
+.news2 a:hover, /* マウスオーバー時 */
+.news2 a:active { /* クリック中 */
+    color: blue; /* すべての状態で青色に設定 */
+    text-decoration: underline; /* 下線を表示 */
+}
+
+.news2 a:hover {
+    color: red; /* ホバー時（マウスオーバー時）の色を赤に設定 */
+}
+

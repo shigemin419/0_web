@@ -1,20 +1,16 @@
 
 @charset "utf-8";
 
- html, body {
-    height: 100%; 
-    margin: 0;
-    padding: 0;
-    background-color: #fff; /* HTML全体とbodyを灰色に */
-	/*border-top: 4px solid #008000;*/
-}
+   html, body {
+		height: auto;
+		margin: 0;
+		overflow: visible;
 
-
+	}
 
    body {
-	
 	border-top: 4px solid #008000;
-	margin: auto;
+	margin: 0;
 	padding: 0;
    }
 
@@ -26,15 +22,6 @@
 	  width: 100%;	
 	  z-index: 4;
 	}
-
-	#news_sns_ifr {		
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 3000px; /*4列３列２列１列で作る。*/
-		width: 100%;	
-		z-index: 4;
-	  }
 
 
 	#news_ifr2 {		
@@ -79,14 +66,6 @@
 		width: 100%;
 		margin-bottom: 0px;
 	}	
-
-	.news_sns-container {
-		position:  relative;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		margin-bottom: 0px;
-	}		
 
 
 	.news-container2 {
@@ -156,9 +135,9 @@
 
 	.header .img3 { /*t*/
 		position:absolute;
-		height: 25px;
+		height: 30px;
 		width: auto; 
-		top: 38px;
+		top: 35px;
 		right: 130px;
 		opacity: 0.5;
 	}
@@ -295,9 +274,9 @@
 
 	/*この位置が@mediaより上にないと@mediaが効かない*/
 	#sec01 {
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
-		margin:  auto;  /* 画面の中央に配置 */
+		margin: 0 auto;  /* 画面の中央に配置 */
 		border: 0px solid #000; 
 		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
@@ -311,27 +290,9 @@
 		overflow-y: scroll;   /* 縦方向のスクロールのみ許可 */
 		overflow-x: hidden;   /* 横方向のスクロールを非表示にする */
 		table-layout : fixed;
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
-		height: 410px;
-		margin-top: -10px;
-		margin-left: 20px;
-		scrollbar-width: thin; /* スクロールバーの幅 */
-    	scrollbar-color: #04b467 transparent; /* スクロールバーの色 */
-		margin-bottom: 50px;
-		/* line-height: 1.2; */
-		
-
-	}
-
-
-	.infobox_sns{
-		overflow-y: scroll;   /* 縦方向のスクロールのみ許可 */
-		overflow-x: hidden;   /* 横方向のスクロールを非表示にする */
-		table-layout : fixed;
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
-		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
-		height: 960px;
+		height: 310px;
 		margin-top: -10px;
 		margin-left: 20px;
 		scrollbar-width: thin; /* スクロールバーの幅 */
@@ -360,7 +321,7 @@
 		overflow-y: scroll;   /* 縦方向のスクロールのみ許可 */
 		overflow-x: hidden;   /* 横方向のスクロールを非表示にする */
 		table-layout : fixed;
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
 		height: 307px;
 		margin-top: -10px;
@@ -390,30 +351,19 @@
 
 
 	#sec02 {
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
 		margin: 0 auto;  /* 画面の中央に配置 */
 		border: 0px solid #000; 
 		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
 		margin-bottom: 40px;
-		height: 500px;
-	}
-
-	#sec025 {
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
-		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
-		margin: 0 auto;  /* 画面の中央に配置 */
-		border: 0px solid #000; 
-		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
-		padding: 0px 30px 0px 30px; /*sec01内の余白*/
-		margin-bottom: 40px;
-		height: 1070px;
+		height: 400px;
 	}
 
 
 	#sec03 {
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
 		margin: 0 auto;  /* 画面の中央に配置 */
 		border: 0px solid #000; 
@@ -423,29 +373,12 @@
 
 
 	}
-
-	#sec04 {
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
-		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
-		margin: 0 auto;  /* 画面の中央に配置 */
-		border: 0px solid #000; 
-		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
-		padding: 0px 30px 0px 30px; /*sec01内の余白*/
-		margin-bottom: 40px;
-
-
-	}
-
-
-
-
-
 
 
 	#sec014 {
 		position: relative;
 		overflow: hidden; /*sec015からはみ出した写真の部分は消える。*/
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
 		margin: 0 auto;  /* 画面の中央に配置 */
 		border: 0px solid #000; 
@@ -458,7 +391,7 @@
 
 	#sec015 {
 		overflow: hidden; /*sec015からはみ出した写真の部分は消える。*/
-		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		max-width: 900px;  /* 最大幅を900pxに設定 */
 		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
 		margin: 0 auto;  /* 画面の中央に配置 */
 		border: 0px solid #000; 
@@ -609,7 +542,7 @@
 
 	.cont-container {
 		text-align: center;
-		max-width: 1000px; /*コンテンツを３列以上にしないため*/
+		max-width: 900px; /*コンテンツを３列以上にしないため*/
 		margin: auto; /*これがないと真ん中に来ない*/
 	}
 	.cont-item {
@@ -635,23 +568,15 @@
 		color: inherit; 
 	}		
 
-	.sns-img {
-		width: 100%;
-		max-width: 250px;
-		display: block;
-		margin: 0 auto; /* 画像を中央に配置 */ 
-		
-	}
+
+
 	.custom-img {
 		width: 100%;
 		display: block;
-		margin: 0 auto; /* 画像を中央に配置 */ 
+		margin: 0 auto; /* 上下のマージンを0にし、左右のマージンを自動で設定 */
+	}
 		
 	}
-
-
-
-
 
 	.cont-text {
 		display: block;
@@ -712,10 +637,10 @@
 
 
 	#slider {
-		width: 15000px; /**★スライドの帯の長さ***/
+		width: 6000px;
 		white-space: nowrap;
 		overflow: hidden;
-		font-size: 0;/*これを指定しないと、一週目と２周目の画像の間隔が変わってしまう*/
+		font-size: 0;　/*これを指定しないと、一週目と２周目の画像の間隔が変わってしまう*/
 	}
 
 	.slide {
@@ -729,7 +654,6 @@
 	}
 
 
-	.label-hirodepa,
 	.label-osirase,
 	.label-gyouzi,
 	.label-syougaku,
@@ -747,10 +671,6 @@
 		font-size: 14px;
 		box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 影を追加 */
 	}
-
-
-
-	
 
 	.label-osirase { /*おしらせ*/
 		/*background-color: #35846c;*/
@@ -770,7 +690,7 @@
 
 	.label-gyouzi { /*学校行事*/
 		/*background-color: #dc4848;*/
-		background-color: rgba(220, 103, 76, 0.9);
+		background-color: rgba(220, 72, 72, 0.9);
 	}
 	.label-gyouzi::before { 
 		content: "学校行事";
@@ -784,17 +704,10 @@
 	}
 
 	.label-tayori { /*たより*/
-		background-color: rgba(142, 129, 240, 0.9);
+		background-color: rgba(165, 139, 35, 0.9);
 	}
 	.label-tayori::before { 
 		content: " た よ り ";
-	}
-
-	.label-hirodepa { /*広デパ*/
-		background-color: rgba(114, 120, 252, 0.9);
-	}
-	.label-hirodepa::before { 
-		content: "広商ﾃﾞﾊﾟｰﾄ";
 	}
 
 
@@ -859,7 +772,6 @@
 
 
 	.slide:hover img,
-	.slide:hover .label-hirodepa,
 	.slide:hover .label-bukatu,
 	.slide:hover .label-osirase,
 	.slide:hover .label-gyouzi,
@@ -873,7 +785,7 @@
 
 	.marquee {
 		position: relative;
-		animation: scroll-left 150s linear infinite; /*★スライドの速度 一周にかかる時間★*/
+		animation: scroll-left 40s linear infinite; /*スライドの速度*/
 	}
 
 	@keyframes scroll-left {
@@ -885,20 +797,8 @@
 		}
 	}
 
-	@media screen and (max-width: 700px) {
-
-		.cont-item {
-			width: 290px;  
-			height: 310px;
-		}		
-
-
-		.custom-img {
-			width: 100% !important; /* 強制的に箱いっぱいに画像幅を広げる。 */
-			height: auto !important; /* アスペクト比を維持 */
-		}		
-
-
+	@media screen and (max-width: 600px) {
+		
 		.cont-text2 {
 			padding: 5px 10px;
 			font-size: 13px;
@@ -912,6 +812,10 @@
 		}
 			
 		
+		.cont-item {
+			width: 280px;  
+			height: 310px;
+		}		
 
 		#ifr2 {
 		  height: 1200px;
@@ -921,13 +825,8 @@
 		
 		.infobox {
 			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
-			height: 470px;
-		}
 
-		.infobox_sns {
-			padding-top: 0px;  /*【重要】項目の間隔を詰めたとき、項目全体を下に落として、一番上の項目が半分消えるのを防ぐ */
-			height: 570px;
-		}		
+		}
 
 		
 		.infobox .news {
@@ -1000,25 +899,13 @@
 		#sec02 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 570px;
+			height: 400px;
 		}
-
-		#sec025 {
-			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
-			padding: 0px 0px 0px 0px;
-			height: 77vh; /*バックの緑色の範囲*/
-		}	
-
+		
 		#sec03 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-		}	
-		
-		#sec04 {
-			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
-			padding: 0px 0px 0px 0px;
 		}		
-		
 
 		#sec014 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
@@ -1085,6 +972,11 @@
 	}
 
 
+
+
+
+
+
 	@media (max-width: 950px) {
 		.no-underline {
 			display: none;
@@ -1092,53 +984,3 @@
 	}
 
 
-	/*コンテンツが下から上へのアニメーション*/
-	/*slide-up,slide-up2,slide-up3のアップにかかる時間をずらす。*/
-	.slide-up {
-		opacity: 0;
-		transform: translateY(40px);
-		transition: all 0.6s ease-out; /* アニメーションにかかる時間の長さt*/
-	}
-
-	.slide-up.show {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	/*コンテンツが下から上へのアニメーション*/
-	.slide-up2 {
-		opacity: 0;
-		transform: translateY(40px);
-		transition: all 1.2s ease-out; /* アニメーションにかかる時間の長さt*/
-	}
-
-	.slide-up2.show {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-
-	.slide-up3 {
-		opacity: 0;
-		transform: translateY(40px);
-		transition: all 1.9s ease-out; /* アニメーションにかかる時間の長さt*/
-	}
-
-	.slide-up3.show {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-
-	/*★---下の動画----*/
-	#bg-video {
-		position: relative;
-		max-width: 1000px;
-		/*border: 15px solid #e5f9e5;*/
-
-		top: -10px;
-		width: 100%;
-		left: 50%;              /* 親要素の中央に配置する */
-		transform: translateX(-50%); /* これにより動画が中央になります */
-		margin-bottom: 20px;
-	}

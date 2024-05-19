@@ -1,0 +1,722 @@
+/* CSS Document */
+
+@charset "utf-8";
+
+   html, body {
+		height: auto;
+		margin: 0;
+		overflow: visible;
+	}
+
+   body {
+	border-top: 4px solid #008000;
+	margin: 0;
+	padding: 0;
+   }
+
+
+
+	#ifr2 {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 380px;
+	  width: 100%;	
+	  z-index: 4;
+	}
+
+	#ifr3 {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 180px;
+	  width: 100%;	
+	  z-index: 5;
+	}
+
+
+	.footer-container {
+		position:  relative;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}		
+
+	.header {
+		position: relative;
+		height: 5px;
+		width: 100%;
+
+	}
+
+	.header .img1 {
+		position: relative;
+		height: 60px;
+		width: 50px; 
+		margin-left: 30px;
+		top: 5px;
+	}		
+
+	.header .img2 {
+		position: relative;
+		height: auto;
+		width: 250px; 
+		margin-left: 5px;
+		top: 0px;
+	}
+
+
+	.header .img11 {
+		position:absolute;
+		height: 47px;
+		width: auto; 
+		top: 22px;
+		right: 200px;
+		opacity: 0.9;
+	}			
+
+	.header .img12 {
+		position:absolute;
+		height: 50px;
+		width: auto; 
+		top: 18px;
+		right: 270px;
+		opacity: 1.0;
+	}	
+
+	/*
+	.header .img13 {
+		position:absolute;
+		height: 60px;
+		width: 70; 
+		top: 10px;
+		right: 340px;
+		opacity: 1.0;
+	}			
+	*/
+
+
+
+	.header .img3 { /*t*/
+		position:absolute;
+		height: 30px;
+		width: auto; 
+		top: 35px;
+		right: 130px;
+		opacity: 0.5;
+	}
+
+	.header .img4 {/*f*/
+		position:absolute;
+		height: 25px;
+		width: auto; 
+		top: 35px;
+		right: 110px; 
+		opacity: 0.5;
+	}
+
+
+	.header .img5 {/*I*/
+		position:absolute;
+		height: 25px;
+		width: auto; 
+		top: 37px;
+		right: 80px; 
+		opacity: 0.6;
+	}			
+
+	.header .img6 {/*Y*/
+		position:absolute;
+		height: 25px;
+		width: auto; 
+		top: 37px;
+		right: 40px; 
+		opacity: 0.5;
+	}
+
+	.header .img7 {/*Tiktok*/
+		position:absolute;
+		height: 25px;
+		width: auto; 
+		top: 35px;
+		right: 10px; 
+		opacity: 0.5;
+	}		
+
+
+
+
+	  .header a:hover .img3 {
+		opacity: 0.7;
+	  }
+
+	  .header a:hover .img4 {
+		opacity: 0.7;
+	  }		
+
+	  .header a:hover .img5 {
+		opacity: 0.9;
+	  }		
+
+	  .header a:hover .img6 {
+		opacity: 0.7;
+	  }
+
+	  .header a:hover .img7 {
+		opacity: 0.7;
+	  }	
+
+	  .header a:hover .img11 {
+		opacity: 0.5;
+	  }			
+
+	  .header a:hover .img12 {
+		opacity: 0.6;
+	  }	
+
+
+	.video-container {
+		width: 100%;
+		height: auto;
+		position: relative;
+		top: 75px;
+		margin-bottom: 65px;
+		transition: top 0.3s ease;
+
+	}		
+
+	.video-container video {
+		width: 100%;
+		height: auto;
+	}
+
+
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: auto;
+		/*background-color: #CBC9C9;*/
+		background-color: #1f6852;
+		text-align: center;
+		color: #FFF; /* 文字色を白に設定 */
+		margin-bottom: 30px; /*CONTENTSの位置を下げる*/
+	}
+
+	li {
+
+		display: inline-block;
+		/*border-right: 15px solid #ffffff; /* 白い境界線を追加 */
+
+	}
+
+	li:last-child {
+		border-right: none; /* 最後のリスト要素には境界線を追加しない */
+	}
+
+	li a {
+		font-size: 12px;
+		display: block;
+		/*color: #3041F9;*/
+		color: #ffffff;
+		text-align: center;
+		padding: 12px 10px 7px 10px; /*項目の間隔*/
+		text-decoration: none;
+
+		/*text-decoration: underline;*/
+
+	}
+
+	li a:hover {
+		/*background-color:#DFDEDE;*/
+		background-color:#2d866b;
+		/*text-decoration: underline;*/
+	}
+
+
+
+	/*この位置が@mediaより上にないと@mediaが効かない*/
+	#sec01 {
+		max-width: 900px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
+		margin: 0 auto;  /* 画面の中央に配置 */
+		border: 0px solid #000; 
+		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
+		padding: 0px 30px 0px 30px; /*sec01内の余白*/
+		margin-bottom: 40px;
+
+
+	}
+
+
+	.infobox{
+		overflow-y: scroll;   /* 縦方向のスクロールのみ許可 */
+		overflow-x: hidden;   /* 横方向のスクロールを非表示にする */
+		table-layout : fixed;
+		max-width: 900px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 30px);  /*両サイドに50pxの隙間を作る */
+		height: 300px;
+		margin-top: -10px;
+		margin-left: 20px;
+		scrollbar-width: thin; /* スクロールバーの幅 */
+    	scrollbar-color: #04b467 transparent; /* スクロールバーの色 */
+		/* line-height: 1.2; */
+		
+
+	}
+
+	/* Chrome, SafariなどのWebkitブラウザ用 */
+	.infobox::-webkit-scrollbar {
+		width: 10px; /* スクロールバーの幅 */
+	}
+
+	.infobox::-webkit-scrollbar-thumb {
+		background-color: #04b467; /* スクロールバーの色 */
+	}
+
+	.infobox::-webkit-scrollbar-track {
+		background-color: #a0fad3; /* スクロールバーの背景色 */
+	}
+
+	#sec02 {
+		max-width: 900px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
+		margin: 0 auto;  /* 画面の中央に配置 */
+		border: 0px solid #000; 
+		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
+		padding: 0px 30px 0px 30px; /*sec01内の余白*/
+		margin-bottom: 40px;
+		height: 430px;
+
+	}
+
+	.infobox .news {
+		border-bottom: none;  /* 線を削除 */
+		text-align: left;  /* 文字を左寄せにする */
+		margin-top: 2px; /*文字の高さ*/
+		line-height: 1.4; /* 行の高さを変える。行間の高さを調整 */
+		padding: 0px 0px 0px 0px;
+	}
+
+	.infobox .news::after {
+		content: '';
+		display: inline-block;
+		width: 95%;  /* 線の長さを80%に設定 */
+		border-bottom: 1px solid #3caaff;  /* 線の色を#3caaffに、太さを2pxに設定 */
+		position: relative;
+		bottom: 3px;  /* 線の位置を調整 */
+		margin:  auto;  /* 左右中央寄せにする */
+		left: 0px;  /* 左側からの位置を10%に設定 */
+
+	}
+
+	.infobox .news:hover {
+		opacity: 0.7;
+	}
+
+	.infobox .news .date {
+		margin-left: 10px;
+		color: #1d1d1e;
+		font-weight: bold;
+		font-size: 14px;
+
+	}
+
+	.infobox .news .osirase {  /*おしらせ*/
+
+		background-color: #35846c;
+		color: white;
+		padding: 0px 10px 0px 10px;
+		font-size: 14px;
+		margin-left: 10px;
+
+	}
+
+	.infobox .news .bukatu { /*部 活 動*/
+
+		background-color: #9843a0;
+		color: white;
+		padding: 0px 10px 0px 10px;
+		font-size: 14px;
+		margin-left: 10px;
+
+	}
+
+	.infobox .news .gyouzi { /*学校行事*/
+
+		background-color: #dc4848;
+		color: white;
+		padding: 0px 10px 0px 10px;
+		font-size: 14px;
+		margin-left: 10px;
+
+	}
+
+	.infobox .news .syougaku { /*奨 学 金*/
+
+		background-color: #a58b23;
+		color: white;
+		padding: 0px 10px 0px 10px;
+		font-size: 14px;
+		margin-left: 10px;
+
+
+
+	}
+
+
+	.infobox .news .naiyou {
+
+		color: #000;
+		font-size: 14px;
+		margin-left: 10px;
+
+	}
+
+
+
+	.news:last-child{
+		border-bottom: none;  /* 最後の要素は線を削除 */
+	}
+
+
+	#sec03 {
+		max-width: 900px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
+		margin: 0 auto;  /* 画面の中央に配置 */
+		border: 0px solid #000; 
+		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
+		padding: 0px 30px 0px 30px; /*sec01内の余白*/
+		margin-bottom: 40px;
+
+
+	}
+
+
+
+	@media screen and (max-width: 600px) {
+		
+		.infobox .news {
+
+			line-height: 1.5; /* 行の高さを変える。行間の高さを調整 */
+
+		}
+		
+		.infobox .news::after {
+
+			bottom: 10px;  /* 線の位置を調整 */
+			margin:  auto;  /* 左右中央寄せにする */
+			left: 0px;  /* 左側からの位置を10%に設定 */
+
+		}		
+		
+		.infobox .news .date {
+			margin-left: 0px;
+			color: #1d1d1e;
+			font-weight: bold;
+			font-size: 14px;
+
+		}		
+
+		.infobox .news .osirase {  /*おしらせ*/
+			padding: 4px 10px 4px 10px;
+			margin-left: 0px;
+		}
+
+		.infobox .news .bukatu { /*部 活 動*/
+			padding: 4px 10px 4px 10px;
+			margin-left: 0px;
+		}
+
+		.infobox .news .gyouzi { /*学校行事*/
+			padding: 4px 10px 4px 10px;
+			margin-left: 0px;
+		}
+
+		.infobox .news .syougaku { /*奨 学 金*/
+			padding: 4px 10px 4px 10px;
+			margin-left: 0px;
+		}
+
+
+		.infobox .news .naiyou {
+
+			color: #000;
+			font-size: 14px;
+			margin-left: 0px;
+
+		}
+
+		
+		
+		#sec01 {
+			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
+			padding: 0px 0px 0px 0px;
+		}			
+		
+		
+		#sec02 {
+			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
+			padding: 0px 0px 0px 0px;
+		}
+		
+		#sec03 {
+			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
+			padding: 0px 0px 0px 0px;
+		}		
+
+		li a {
+			font-size: 12px;
+			padding: 14px 5px 5px 0px; /*項目の間隔*/
+		}
+
+		.header .img1 {
+			position: relative;
+			height: 55px;
+			width: 45px; 
+			margin-left: 30px;
+			top: 5px;
+			margin-left: 0px;
+		}		
+
+		.header .img2 {
+			position: relative;
+			height: auto;
+			width: 220px; 
+			margin-left: 5px;
+			top: 0px;
+		}
+
+
+		.header .img3 {/*Tiktok*/
+			display: none;
+		}	
+		.header .img4 {/*Tiktok*/
+			display: none;
+		}	
+		.header .img5 {/*Tiktok*/
+			display: none;
+		}	
+		.header .img6 {/*Tiktok*/
+			display: none;
+		}	
+		.header .img7 {/*Tiktok*/
+			display: none;
+		}	
+
+
+		.header .img11 {
+			right: 10px;
+		}			
+
+		.header .img12 {
+			right: 70px;
+		}				
+
+
+
+	}
+
+
+	@media (max-width: 950px) {
+		.no-underline {
+			display: none;
+		}
+	}
+
+
+
+	.link-container {
+		display: inline-block;
+		text-align: center;
+		font-size: 13px;  /* 希望のフォントサイズに変更してください */
+		margin: 0 10px;  /* 調整するかもしれません */
+		color: #444;
+		margin-left: 10px;
+
+
+
+	}
+
+	.no-underline {
+		position: relative;
+		bottom: 4px; 
+	}
+
+
+	.link-subtext {
+		display: block;
+		font-size: 10px;  /* 希望のフォントサイズに変更してください */
+		color: #298b56;  /* 希望の色に変更してください */
+	}
+
+	.link-subtext:hover {
+
+		color: #298b56;  /* 希望の色に変更してください */
+	}
+
+	.no-underline {
+		text-decoration: none;
+		color: #444;
+	}
+
+	.no-underline:visited {
+		color: #298b56;
+	}
+
+	.no-underline:hover {
+		color: #298b56;
+	}
+
+	.no-underline:active {
+		color:#298b56;
+	}
+
+	.video-container {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	#myVideo {
+		width: 100%;
+		height: auto;
+	}
+
+	#overlay {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}		
+
+
+	.contents {
+		text-align: left;
+		font-size: 20px;
+		color: #39ae8b;
+		font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+		font-style: italic;
+		/*border-bottom: 1px solid #ddd;*/
+		padding: 20px 0px 20px  ;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.contents::after {
+		content: "";
+		display: block;
+		/*margin: auto; */
+		height: 1px;
+		width: 100%;  
+		background: #3caaff;
+		margin-bottom: 0px;
+	}
+
+	.contents::before {
+	  content: "";
+	  display: inline-block;
+	  width: 40px;
+	  height: 40px;
+	  margin-right: 5px;
+	  background: url(../images/kousyou7.png) no-repeat;
+	  background-size: contain;
+	  position: relative;
+	  bottom: -8px;
+	}
+
+
+
+	.cont-container {
+		text-align: center;
+		max-width: 900px; /*コンテンツを３列以上にしないため*/
+		margin: auto; /*これがないと真ん中に来ない*/
+	}
+	.cont-item {
+		display: inline-block;
+		margin: 8px;
+
+		width: 280px;  
+		height: 290px;
+		overflow: hidden; 
+		background-color: #fff; 
+		box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2); /* X-offset, Y-offset, blur, spread, color */
+		margin-bottom: 30px;
+
+	}
+
+	.cont-item:hover {
+		opacity: 0.7; /* ホバー時の透明度を設定 */
+	}		
+
+	a, a:visited {
+		text-decoration: none;
+		color: inherit; 
+	}		
+
+
+
+	.custom-img {
+		width: 100%;
+		display: block;
+	}
+
+	.cont-text {
+		display: block;
+		text-align: center;
+
+		margin-top:10px;
+		color: #3f64cc;
+		/*text-shadow: 1px 1px 3px #000000;*/
+		font-family:   "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
+		/*font-family: "Osaka-mono", "MS Gothic", "monospace";*/
+		/*font-family: YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "serif";*/
+		/*font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";*/
+		/*font-family: Arial, Helvetica, "sans-serif";*/
+		/*font-family: "Osaka-mono", "MS Gothic", "monospace";*/
+		font-weight: 400;
+		font-size: 18px;
+		margin-bottom: 1px;
+
+
+	}
+	.cont-text2 {
+		display: block;
+		text-align: left;
+		height: 50px;
+
+		padding: 5px 20px;
+		color: #464545;
+		/*text-shadow: 1px 1px 3px #000000;*/
+		/*font-family: "Hiragino Mincho Pro", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Mincho", serif;*/ 
+		font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		font-size: 13px;
+
+	}		
+
+
+    /* ローディング画面のスタイル */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.8);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading-message {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+

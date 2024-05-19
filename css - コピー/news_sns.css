@@ -143,17 +143,16 @@ background: #f1f1f1;
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
     .content-container {
         /*max-height: 670px; /* 高さを300pxに変更 */
-        max-height: 65vh; /*SNS画像の描画範囲*/
+        max-height: 120vw;
 
     }
     .slide-wrapper {
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 45vw);
         gap: 5px;
     }
-        
     .slide_sns {      /*★★★注意：%とvwの違い★★★*/
         width: 45vw;  /* 45vwはビューポート幅の45％ということ。ビューポートはデバイスの画面幅 */
         height: 45vw; /* 一方、ページ幅の％表示は、画面に入りきらないページ幅の部分も考慮してしまうので、*/
