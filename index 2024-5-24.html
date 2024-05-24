@@ -2,15 +2,19 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <meta name="description" content="広島県立広島商業高等学校">
 <title>広島県立広島商業高等学校</title>	
 	
 <link href="favicon.ico" rel="shortcut icon" />
 	
 <link rel="stylesheet" media="all" href="css/topstyle.css">
-	
 
+<link rel="stylesheet" media="all" href="css/news_sns.css">
+
+<link rel="stylesheet" media="all" href="css/news_hiro.css">
 
 <!--script src="https://code.jquery.com/jquery-3.7.0.min.js"></script-->
 <!--script src="https://code.jquery.com/jquery-3.5.1.min.js"></script-->
@@ -123,6 +127,16 @@
 			</div>
 		</div>	
 
+		<div class="slide slide-up2">	
+			<div class="cont-item">
+				<a href="pdf.html?img=pdf/sinrozisseki.jpg&size=90&name=進路状況" target="_parent" >
+					<img class="custom-img" src="img/sinro.jpg" title="">
+					<span class="cont-text">【進路実績】</span>
+					<span class="cont-text2">令和５年度、令和４年度の進路実績。生徒が進路目標を達成するための、進路指導部の具体的な取り組みなど。</span>
+				</a>
+			</div>			
+		</div>
+
 		<div class="slide slide-up">
 			<div class="cont-item">
 				<a href="pdf_respo.html?img1=pdf/R6_SAH.jpg&img2=pdf/R6_SAH_s.jpg&size1=100&size2=100&name=SAH" target="_parent" >
@@ -143,17 +157,7 @@
 		   </div>
 	   </div>
 
-		<div class="slide slide-up2">			
-			<div class="cont-item">
-			   <!-- <a href="html_ifr.html?html=club/clubmenu.html&height=3300&height_s=8350" target="_parent" > -->
-			   <a href="event/nyuugakusiki2024/rd.html" target="_parent" >
-				   <img class="custom-img" src="topic/0_nyuugakusiki.jpg" title="pamphlet">
-				   <span class="cont-text">【入学式】</span>
-				   <span class="cont-text2">４月９日（火）、本校体育館で入学式が挙行されました。</span>
-			   </a>
-		   </div>
-	   </div>
-  
+
 		
 
 
@@ -180,7 +184,7 @@
 				<a href="sns3.html" target="_parent" >
 					<img class="custom-img" src="topic/0_SNS.jpg" >
 					<span class="cont-text">【広商 公式ＳＮＳ】</span>
-					<span class="cont-text2">広商公式インスタグラムを始めました。他にも広商デパートや商業研究部の活動、学校行事、部活動など発信しています。</span>
+					<span class="cont-text2">広商公式インスタグラムを始めました。広商デパートや商業研究部の活動、学校行事、部活動なども発信しています。</span>
 				</a>
 			</div>
 		</div> 
@@ -757,37 +761,295 @@
 
 	
 
-	<script>
-		// news_ifrの高さをnews_sns.htmlから取得する。
-        function adjustIframeHeight() {
-            const iframe = document.getElementById('news_sns_ifr');
-            if (iframe) {
-                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-            }
-        }
-
-        window.addEventListener('message', (event) => {
-            if (event.origin !== window.location.origin) {
-                return;
-            }
-            if (event.data && event.data.height) {
-                const iframe = document.getElementById('news_sns_ifr');
-                iframe.style.height = event.data.height + 'px';
-            }
-        });
-    </script>
-
 	<section id="sec025">
 			
 		<div class="contents">広商公式 ＳＮＳ</div>
-		
-		<div class="infobox_sns">
-			
-			<div class="news_sns-container">
-				<iframe id="news_sns_ifr" src="news_sns.html" frameborder="0"  scrolling="no"></iframe>
-			</div>		
 
+
+		<div class="content-container">
+			<div class="slide-wrapper">
+				<!-- スライドコンテンツ -->
+
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C7S8oJAymOR/" target="_parent">
+						<img src="SNS/R6-05-23-2.jpg">
+						<div class="date-label_sns">R6/05/23</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_gyouji">
+					<a href="https://www.instagram.com/p/C7Stppxy4Tv/?igsh=MWk2YnJ1aW9sdWdsYg%3D%3D&utm_source=qr%2F&img_index=1" target="_parent">
+						<img src="SNS/R6-05-23-1.jpg">
+						<div class="date-label_sns">R6/05/23</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_jyugyou">
+					<a href="https://www.instagram.com/p/C7QWRFeyVf0/" target="_parent">
+						<img src="SNS/R6-05-22-2.jpg">
+						<div class="date-label_sns">R6/05/22</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C7OfW7Iy7Yo/" target="_parent">
+						<img src="SNS/R6-05-22-1.jpg">
+						<div class="date-label_sns">R6/05/22</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+
+				<div class="slide_sns s_nitijyou">
+					<a href="https://www.instagram.com/p/C7Lypbcy40P/?igsh=MWk2YnJ1aW9sdWdsYg%3D%3D&utm_source=qr%2F&img_index=1" target="_parent">
+						<img src="SNS/R6-05-21-5.jpg">
+						<div class="date-label_sns">R6/05/21</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C7LuIg7Skix/" target="_parent">
+						<img src="SNS/R6-05-21-4.jpg">
+						<div class="date-label_sns">R6/05/21</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_gyouji">
+					<a href="https://www.instagram.com/p/C7LtWYNSW6l/" target="_parent">
+						<img src="SNS/R6-05-21-3.jpg">
+						<div class="date-label_sns">R6/05/21</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+
+
+				<div class="slide_sns s_syoukenbu">
+					<a href="https://www.instagram.com/p/C7Lzis1Rgr2/" target="_parent">
+						<img src="SNS/R6-05-21-2.jpg">
+						<div class="date-label_sns">R6/05/21</div>
+						<span class="instagram"></span>
+						<div class="label-syoukenbu"></div>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_syoukenbu">
+					<a href="https://www.instagram.com/p/C7OQs9LxKyY/" target="_parent">
+						<img src="SNS/R6-05-21-1.jpg">
+						<div class="date-label_sns">R6/05/21</div>
+						<span class="instagram"></span>
+						<div class="label-syoukenbu"></div>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C7FxzbqSB9F/" target="_parent">
+						<img src="SNS/R6-05-20-3.jpg">
+						<div class="date-label_sns">R6/05/20</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+	
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C7Dj71QyYax/" target="_parent">
+						<img src="SNS/R6-05-20-2.jpg">
+						<div class="date-label_sns">R6/05/20</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+	
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C7DjLrjSEge/" target="_parent">
+						<img src="SNS/R6-05-20-1.jpg">
+						<div class="date-label_sns">R6/05/20</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+	
+
+
+				<div class="slide_sns s_syoukenbu">
+					<a href="https://www.instagram.com/p/C7EEGxiygGu/" target="_parent">
+						<img src="SNS/R6-05-17-3.jpg">
+						<div class="date-label_sns">R6/05/17</div>
+						<span class="instagram"></span>
+						<div class="label-syoukenbu"></div>
+					 </a>
+				</div>
+
+				<div class="slide_sns s_gyouji">
+					<a href="https://www.instagram.com/p/C7BaOvpSLW8/" target="_parent">
+						<img src="SNS/R6-05-17-2.jpg">
+						<div class="date-label_sns">R6/05/17</div>
+						<span class="instagram"></span>
+					 </a>
+				</div>
+	
+	
+	
+	
+				<div class="slide_sns s_nitijyou">
+					<a href="https://www.instagram.com/p/C7BcDYmS2SA/" target="_parent">
+						<img src="SNS/R6-05-17-1.jpg">
+						<div class="date-label_sns">R6/05/17</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+	
+	
+	
+	
+				<div class="slide_sns s_syoukenbu">
+					<a href="https://www.instagram.com/p/C6-4EX9LIjD/" target="_parent">
+						<img src="SNS/R6-05-16-3.jpg">
+						<div class="date-label_sns">R6/05/16</div>
+						<span class="instagram"></span>
+						<div class="label-syoukenbu"></div>
+						</a>
+				</div>
+	
+	
+				<div class="slide_sns s_gyouji">
+					<a href="https://www.instagram.com/p/C68qJbdyvf-/" target="_parent">
+						<img src="SNS/R6-05-16-2.jpg">
+						<div class="date-label_sns">R6/05/16</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+	
+				
+	
+				<div class="slide_sns s_jyugyou">
+					<a href="https://www.instagram.com/p/C6-scx_yfwq/" target="_parent">
+						<img src="SNS/R6-05-16-1.jpg">
+						<div class="date-label_sns">R6/05/16</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+	
+		
+			
+				<div class="slide_sns s_jyugyou">
+					<a href="https://www.instagram.com/p/C68gSKZyCP9/" target="_parent">
+						<img src="SNS/R6-05-15-1.jpg">
+						<div class="date-label_sns">R6/05/15</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+	
+	
+				<div class="slide_sns s_syoukenbu">
+					<a href="https://www.instagram.com/p/C68aPv5P8B7/" target="_parent">
+						<img src="SNS/R6-05-14-1.jpg">
+						<div class="date-label_sns">R6/05/14</div>
+						<div class="label-syoukenbu"></div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+	
+	
+	
+	
+				<div class="slide_sns s_jyugyou">
+					<a href="https://www.instagram.com/p/C65uJOayluy/" target="_parent">
+						<img src="SNS/R6-05-13-2.jpg">
+						<div class="date-label_sns">R6/05/13</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+	
+	
+	
+	
+		
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C65u08Lyx1g/" target="_parent">
+						<img src="SNS/R6-05-13-1.jpg">
+						<div class="date-label_sns">R6/05/13</div>
+						<span class="instagram"></span>
+					</a>
+				</div>
+		
+	
+			
+				<div class="slide_sns s_gyouji">
+				   <a href="https://www.instagram.com/p/C6zrWgdSCw-/" target="_parent">
+					   <img src="SNS/R6-05-11-1.jpg">
+					   <div class="date-label_sns">R6/05/11</div>
+					   <span class="instagram"></span>
+				   </a>
+			   </div>
+	
+	
+			<div class="slide_sns s_jyugyou">
+				<a href="https://www.instagram.com/p/C6xwRRkyMQl/" target="_parent">
+					<img src="SNS/R6-05-10-3.jpg">
+					<div class="date-label_sns">R6/05/10</div>
+					<span class="instagram"></span>
+					</a>
+			</div>
+	
+	
+			<div class="slide_sns s_bukatu">
+				<a href="https://www.instagram.com/p/C6xw8HxSzhV/" target="_parent">
+					<img src="SNS/R6-05-10-2.jpg">
+					<div class="date-label_sns">R6/05/10</div>
+					<span class="instagram"></span>
+				</a>
+			</div>
+	
+	
+			<div class="slide_sns s_syoukenbu">
+				<a href="https://www.instagram.com/p/C6yAmmFSQEs/" target="_parent">
+					<img src="SNS/R6-05-10-1.jpg">
+					<div class="date-label_sns">R6/05/10</div>
+					<!-- <div class="text-wakumozi-a" style="top: 100px; left: 20px; font-size: 24px;">とよひらいぶ</div>
+					<div class="text-wakumozi-a" style="top: 150px; left: 40px; font-size: 22px;">ポスター</div> -->
+					<div class="label-syoukenbu"></div>
+					<span class="instagram"></span>
+				</a>
+			</div>					
+	
+	
+			<div class="slide_sns s_nitijyou">
+				<a href="https://www.instagram.com/p/C6vPaphSA8_/?igsh=MWk2YnJ1aW9sdWdsYg%3D%3D&utm_source=qr%2F&img_index=1" target="_parent">
+					<img src="SNS/R6-05-09-2.jpg">
+					<div class="date-label_sns">R6/05/09</div>
+					<span class="instagram"></span>
+				</a>
+			</div>
+			
+	
+			<div class="slide_sns s_jyugyou">
+				<a href="https://www.instagram.com/p/C6vdFhjyU4F/" target="_parent">
+					<img src="SNS/R6-05-09-1.jpg">
+					<div class="date-label_sns">R6/05/09</div>
+					<span class="instagram"></span>
+				</a>
+			</div>			
+			
+			<div class="slide_sns s_syoukenbu">
+				<a href="https://www.instagram.com/p/C6s1U4oSm8r/" target="_parent">
+					<img src="SNS/R6-05-08-2.jpg">
+					<div class="date-label_sns">R6/05/08</div>
+					<span class="instagram"></span>
+				</a>
+			</div>			
+	
+	
+			</div>
 		</div>
+
+
+
+
+
+	
 		
 	</section>		
 
@@ -819,15 +1081,15 @@
 			</div>			
 		</div>	
 			
-		<div class="slide slide-up2">	
+		<!-- <div class="slide slide-up2">	
 			<div class="cont-item">
-				<a href="pdf.html?img=pdf/R4_sinrojyoukyou.jpg&size=90&name=進路状況" target="_parent" >
+				<a href="pdf.html?img=pdf/R5_sinrojyoukyou.jpg&size=90&name=進路状況" target="_parent" >
 					<img class="custom-img" src="img/sinro.jpg" title="">
 					<span class="cont-text">【進 路】</span>
-					<span class="cont-text2">大学・短大・専門学校合格者一覧、就職先一覧。生徒の進路目標を達成するための進路指導部の具体的な取り組みなど。</span>
+					<span class="cont-text2">令和５年度進路実績（大学・短大・専門学校合格者一覧、就職先一覧）。進路目標を達成するための進路指導部の取り組み。</span>
 				</a>
 			</div>			
-		</div>	
+		</div>	 -->
 			
 		<div class="slide slide-up2">				
 			<div class="cont-item">
@@ -874,16 +1136,29 @@
 				</a>
 			</div>	
 		</div>	
-		<div class="slide slide-up2">			
-			<div class="cont-item">
-			   <!-- <a href="html_ifr.html?html=club/clubmenu.html&height=3300&height_s=8350" target="_parent" > -->
-			   <a href="event/sotugyousiki2023/rd.html" target="_parent" >
-				   <img class="custom-img" src="topic/0_sotugyousiki.jpg" title="pamphlet">
-				   <span class="cont-text">【卒業証書授与式】</span>
-				   <span class="cont-text2">３月６日（水）、本校体育館で卒業証書授与式が挙行されました。</span>
-			   </a>
-		   </div>
+
+	   <div class="slide slide-up2">			
+		<div class="cont-item">
+		   <!-- <a href="html_ifr.html?html=club/clubmenu.html&height=3300&height_s=8350" target="_parent" > -->
+		   <a href="event/nyuugakusiki2024/rd.html" target="_parent" >
+			   <img class="custom-img" src="topic/0_nyuugakusiki.jpg" title="pamphlet">
+			   <span class="cont-text">【入学式】</span>
+			   <span class="cont-text2">４月９日（火）、本校体育館で入学式が挙行されました。</span>
+		   </a>
 	   </div>
+   </div>
+	 
+		
+   <div class="slide slide-up2">			
+	<div class="cont-item">
+	   <!-- <a href="html_ifr.html?html=club/clubmenu.html&height=3300&height_s=8350" target="_parent" > -->
+	   <a href="event/sotugyousiki2023/rd.html" target="_parent" >
+		   <img class="custom-img" src="topic/0_sotugyousiki.jpg" title="pamphlet">
+		   <span class="cont-text">【卒業証書授与式】</span>
+		   <span class="cont-text2">３月６日（水）、本校体育館で卒業証書授与式が挙行されました。</span>
+	   </a>
+   </div>
+  </div>
 
 	   <div class="slide slide-up2">			
 			<div class="cont-item">

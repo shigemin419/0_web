@@ -409,8 +409,21 @@
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
 		margin-bottom: 40px;
 		height: 1070px;
+
 	}
 
+
+	#sec026 {
+		max-width: 1000px;  /* 最大幅を900pxに設定 */
+		width: calc(100% - 100px);  /*両サイドに50pxの隙間を作る */
+		margin: 0 auto;  /* 画面の中央に配置 */
+		border: 0px solid #000; 
+		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
+		padding: 0px 30px 0px 30px; /*sec01内の余白*/
+		margin-bottom: 40px;
+		height: 600px;
+		display: none; /*★★★★★★　広商デパートSNS を非表示にする*/
+	}	
 
 	#sec03 {
 		max-width: 1000px;  /* 最大幅を900pxに設定 */
@@ -556,7 +569,19 @@
 
 	}
 
+	.contents_hiro {
+		text-align: left;
+		font-size: 20px;
+		color: #39ae8b;
+		font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+		font-style: italic;
+		/*border-bottom: 1px solid #ddd;*/
+		padding: 20px 0px 20px  ;
+		margin-left: 20px;
+		margin-right: 20px;
 
+	}
+	
 	.topics-title {
 		margin-right: 50px;
 	}
@@ -606,7 +631,27 @@
 	}
 
 
+	.contents_hiro::after {
+		content: "";
+		display: block;
+		/*margin: auto; */
+		height: 1px;
+		width: 100%;  
+		background: #3caaff;
+		margin-bottom: 0px;
+	}
 
+	.contents_hiro::before {
+	  content: "";
+	  display: inline-block;
+	  width: 40px;
+	  height: 40px;
+	  margin-right: 5px;
+	  background: url(../images/panda_sns2.png) no-repeat;
+	  background-size: contain;
+	  position: relative;
+	  bottom: -8px;
+	}
 	.cont-container {
 		text-align: center;
 		max-width: 1000px; /*コンテンツを３列以上にしないため*/
@@ -1008,6 +1053,14 @@
 			padding: 0px 0px 0px 0px;
 			height: 77vh; /*バックの緑色の範囲*/
 		}	
+
+		#sec026 {
+			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
+			padding: 0px 0px 0px 0px;
+			height: 70vh; /*バックの緑色の範囲*/
+		}	
+
+
 
 		#sec03 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
