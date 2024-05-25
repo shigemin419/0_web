@@ -119,8 +119,8 @@ background: #f1f1f1;
     background: url('../img/youtube.png') no-repeat;
 }
 
-.label-syoukenbu,
-.label-hirodepa {
+.label-sns-syoukenbu,
+.label-sns-hirodepa {
     position: absolute;
     top: 0;
     left: 80px;
@@ -134,15 +134,20 @@ background: #f1f1f1;
     border: none; /* 外枠を完全に削除 */
 }
 
-.label-syoukenbu {
+.label-sns-syoukenbu {
     background-color: rgba(220, 72, 72, 0.9);
 }
 
-.label-syoukenbu::before {
+.label-sns-syoukenbu::before {
     content: "商 研 部";
 }
 
-
+.label-sns-hirodepa { /*広デパ*/
+    background-color: rgba(114, 120, 252, 0.9);
+}
+.label-sns-hirodepa::before { 
+    content: "広商ﾃﾞﾊﾟｰﾄ";
+}
 /**********SNS分類ボタン********************/
 #buttons {
     text-align: center;
@@ -192,7 +197,9 @@ background: #f1f1f1;
                       /* 画面をはみ出すページ幅の時は%とvwは一致しない。 */
     }
 
-    .label-syoukenbu {
+    .label-sns-syoukenbu,
+    .label-sns-hirodepa
+    {
         left: 0px;
         top: 25px;
     }
