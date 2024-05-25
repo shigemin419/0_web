@@ -28,11 +28,19 @@
 	document.addEventListener('DOMContentLoaded', function () {
 		const buttons = document.querySelectorAll('.filter-btn');
 		const slides = document.querySelectorAll('.slide_sns');
+		
+		// 初期状態で全て表示のボタンをアクティブに設定
+		const allButton = document.querySelector('[data-filter="all"]');
+		allButton.classList.add('active');
 	
 		buttons.forEach(button => {
 			button.addEventListener('click', function () {
-				const filter = this.getAttribute('data-filter');
+				// 他の全てのボタンからアクティブクラスを削除
+				buttons.forEach(btn => btn.classList.remove('active'));
+				// クリックされたボタンにアクティブクラスを追加
+				this.classList.add('active');
 	
+				const filter = this.getAttribute('data-filter');
 				slides.forEach(slide => {
 					if (filter === 'all') {
 						slide.style.display = 'block';
@@ -47,6 +55,7 @@
 			});
 		});
 	});
+	
 
 </script>
 
@@ -789,12 +798,22 @@
 
 	<section id="sec025">
 			
-		<div class="contents">広商公式 ＳＮＳ</div>
+		<style>
+			.category-text {
+				/*display: block; /* ブロック要素として扱う */
+				/*text-align: center; /* 中央揃え */
+				/*color: blue;*/
+				font-style: normal;
+				/*font-weight: bold;*/
+			}
+		</style>	
+
+		<div class="contents">広商公式 ＳＮＳ　<span class="category-text">下のボタンで分類別表示</span></div>
 
 
 		<div class="content-container">
 
-			<!-- <div id="buttons">
+			<div id="buttons">
 				<button class="filter-btn" data-filter="all">全て表示</button>
 				<button class="filter-btn" data-filter="s_hirodepa">広商デパート</button>
 				<button class="filter-btn" data-filter="s_jyugyou">授　業</button>
@@ -802,7 +821,7 @@
 				<button class="filter-btn" data-filter="s_bukatu">部　活</button>
 				<button class="filter-btn" data-filter="s_nitijyou">日　常</button>
 				<button class="filter-btn" data-filter="s_syoukenbu">商研部</button>
-			</div> -->
+			</div>
 
 
 			<div class="slide-wrapper">
@@ -1039,7 +1058,7 @@
 			   </div>
 	
 	
-			<div class="slide_sns s_jyugyou">
+			<div class="slide_sns s_gyouji">
 				<a href="https://www.instagram.com/p/C6xwRRkyMQl/" target="_parent">
 					<img src="SNS/R6-05-10-3.jpg">
 					<div class="date-label_sns">R6/05/10</div>

@@ -143,6 +143,37 @@ background: #f1f1f1;
 }
 
 
+/**********SNS分類ボタン********************/
+#buttons {
+    text-align: center;
+    margin: -10px 0 15px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background-color: #4CAF50; /* 通常時の背景色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s; /* 背景色の変更にアニメーションを適用 */
+}
+
+.filter-btn:hover {
+    background-color: #367B3F; /* ホバー時の背景色 */
+}
+
+.filter-btn.active {
+    background-color: #285a29; /* アクティブ時（押された時）の背景色 */
+}
+
+
+/******************************/
+
+
+
+
 @media screen and (max-width: 700px) {
     .content-container {
         /*max-height: 670px; /* 高さを300pxに変更 */
