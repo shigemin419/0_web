@@ -23,6 +23,32 @@
 	
 <script src="js/topscript.js" ></script>
 	
+<script>
+	/*SNS分野別表示*/
+	document.addEventListener('DOMContentLoaded', function () {
+		const buttons = document.querySelectorAll('.filter-btn');
+		const slides = document.querySelectorAll('.slide_sns');
+	
+		buttons.forEach(button => {
+			button.addEventListener('click', function () {
+				const filter = this.getAttribute('data-filter');
+	
+				slides.forEach(slide => {
+					if (filter === 'all') {
+						slide.style.display = 'block';
+					} else {
+						if (slide.classList.contains(filter)) {
+							slide.style.display = 'block';
+						} else {
+							slide.style.display = 'none';
+						}
+					}
+				});
+			});
+		});
+	});
+
+</script>
 
 </head>
 	
@@ -767,6 +793,18 @@
 
 
 		<div class="content-container">
+
+			<!-- <div id="buttons">
+				<button class="filter-btn" data-filter="all">全て表示</button>
+				<button class="filter-btn" data-filter="s_hirodepa">広商デパート</button>
+				<button class="filter-btn" data-filter="s_jyugyou">授　業</button>
+				<button class="filter-btn" data-filter="s_gyouji">行　事</button>
+				<button class="filter-btn" data-filter="s_bukatu">部　活</button>
+				<button class="filter-btn" data-filter="s_nitijyou">日　常</button>
+				<button class="filter-btn" data-filter="s_syoukenbu">商研部</button>
+			</div> -->
+
+
 			<div class="slide-wrapper">
 				<!-- スライドコンテンツ -->
 
@@ -778,7 +816,7 @@
 					 </a>
 				</div>
 
-				<div class="slide_sns s_bukatu">
+				<div class="slide_sns s_gyouji">
 					<a href="https://www.instagram.com/p/C7VcktvSPkY/" target="_parent">
 						<img src="SNS/R6-05-24-1.jpg">
 						<div class="date-label_sns">R6/05/24</div>
