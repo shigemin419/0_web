@@ -408,7 +408,7 @@
 		background-color: rgba(0, 200, 0, 0.1); /* 内側の明度を落とす（黒を10%の透明度で重ねる） */
 		padding: 0px 30px 0px 30px; /*sec01内の余白*/
 		margin-bottom: 40px;
-		height: 1070px;
+		height: 1150px;
 
 	}
 
@@ -1051,7 +1051,7 @@
 		#sec025 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 77vh; /*バックの緑色の範囲*/
+			height: 91vh; /*バックの緑色の範囲*/
 		}	
 
 		#sec026 {

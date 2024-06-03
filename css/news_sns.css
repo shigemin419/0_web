@@ -7,6 +7,9 @@
     box-sizing: border-box;
     border: none; /* 外枠を完全に削除 */
     margin-top :-10px;
+    transform: translateZ(0); /* 3D変換を利用してハードウェアアクセラレーションを有効化 */
+    -webkit-overflow-scrolling: touch; /* スクロール時のアニメーションを有効化 */ 
+      /* スマートフォンでSNSの分野別ボタンを押したとき、先頭が消えるのを防ぐため、上の2行を入れた */ 
 }
 
 .slide-wrapper {
@@ -116,7 +119,7 @@ background: #f1f1f1;
 }
 
 .youtube {
-    background: url('../img/youtube.png') no-repeat;
+    background: url('../img/youtube2.png') no-repeat;
 }
 
 .label-sns-syoukenbu,
@@ -167,11 +170,11 @@ background: #f1f1f1;
 }
 
 .filter-btn:hover {
-    background-color: #307b32; /* ホバー時の背景色 */
+    background-color: #2a6a2c; /* ホバー時の背景色 */
 }
 
 .filter-btn.active {
-    background-color: #307b32; /* アクティブ時（押された時）の背景色 */
+    background-color: #2a6a2c; /* アクティブ時（押された時）の背景色 */
 }
 
 
