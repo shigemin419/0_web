@@ -1057,7 +1057,8 @@
 		#sec026 {
 			width: calc(100% - 20px);  /*両サイドに50pxの隙間を作る */
 			padding: 0px 0px 0px 0px;
-			height: 70vh; /*バックの緑色の範囲*/
+			/*height: 70vh; /*バックの緑色の範囲*/
+			min-height: 500px;
 		}	
 
 
@@ -1136,6 +1137,7 @@
 
 		
 	}
+
 
 
 	@media (max-width: 950px) {

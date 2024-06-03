@@ -818,6 +818,18 @@
 		</style>	
 
 
+		<script>
+
+			/* スマホの場合、androidの高さを変更 SNS表示の緑色の枠の長さ調整*/
+			if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+				document.getElementById('sec025').style.height = "650px";
+				/*document.querySelector('.infobox_sns').style.height = "620px";*/
+			}
+			
+
+		</script>	
+
+
 		<div class="contents">広商公式 ＳＮＳ　<span class="category-text">下のボタンで分類別表示</span></div>
 
 		<div id="buttons">
