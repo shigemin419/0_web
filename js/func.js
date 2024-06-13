@@ -292,6 +292,161 @@ function redirectToPage() {
 }
 
 
+function redirectToPage2() {
+	var mozisuu =window.location.href.length;
+	var moziiti =window.location.href.lastIndexOf("/");
+	var url_self=window.location.href;
+	var bairitu=1;
+	var kaisou=2;
+	var f_name="";
+	var url_str;
+	var url_pdf;
+	
+	if(bairitu != 0){ //bairitu=0ならpdfなし。pdfファイルはpdfのフォルダーにいれるか、自身と同じフォルダー
+	
+		switch(kaisou){
+			case 0:
+				url_pdf = f_name + ".pdf#zoom=" + bairitu;
+				break;
+			case 1:
+				url_pdf ="pdf/" + f_name + ".pdf#zoom=" + bairitu;
+				break;
+			case 2:
+				url_pdf ="../pdf/" + f_name + ".pdf#zoom=" + bairitu;
+				break;
+			case 3:
+				url_pdf ="../../pdf/" + f_name + ".pdf#zoom=" + bairitu;
+				break;
+			default:
+				alert("階層指定に間違いがあります");
+				break;
+		}
+	}	
+
+	var password = document.getElementById('password').value;
+
+	// パスワードが1234なら1234.htmlにリダイレクト
+	if (password === ppss) {
+		window.location.href = upa2;
+	} else {
+		alert(pps);
+	}
+	
+	
+   var ua = window.navigator.userAgent.toLowerCase();
+    var ver = window.navigator.appVersion.toLowerCase();
+    var name = 'unknown';
+
+    if (ua.indexOf("msie") != -1){
+        if (ver.indexOf("msie 6.") != -1){
+            name = 'ie6';
+        }else if (ver.indexOf("msie 7.") != -1){
+            name = 'ie7';
+        }else if (ver.indexOf("msie 8.") != -1){
+            name = 'ie8';
+        }else if (ver.indexOf("msie 9.") != -1){
+            name = 'ie9';
+        }else if (ver.indexOf("msie 10.") != -1){
+            name = 'ie10';
+        }else{
+            name = 'ie';
+        }
+    }else if(ua.indexOf('trident/7') != -1){
+        name = 'ie11';
+    }else if (ua.indexOf('chrome') != -1){
+        name = 'chrome';
+    }else if (ua.indexOf('safari') != -1){
+        name = 'safari';
+    }else if (ua.indexOf('opera') != -1){
+        name = 'opera';
+    }else if (ua.indexOf('firefox') != -1){
+        name = 'firefox';
+    }	
+	
+}
+
+
+
+function redirectToPage3() {
+	var mozisuu =window.location.href.length;
+	var moziiti =window.location.href.lastIndexOf("/");
+	var url_self=window.location.href;
+	var bairitu=1;
+	var kaisou=2;
+	var f_name="";
+	var url_str;
+	var url_pdf;
+	
+	if(bairitu != 0){ //bairitu=0ならpdfなし。pdfファイルはpdfのフォルダーにいれるか、自身と同じフォルダー
+	
+		switch(kaisou){
+			case 0:
+				url_pdf = f_name + ".pdf#zoom=" + bairitu;
+				break;
+			case 1:
+				url_pdf ="pdf/" + f_name + ".pdf#zoom=" + bairitu;
+				break;
+			case 2:
+				url_pdf ="../pdf/" + f_name + ".pdf#zoom=" + bairitu;
+				break;
+			case 3:
+				url_pdf ="../../pdf/" + f_name + ".pdf#zoom=" + bairitu;
+				break;
+			default:
+				alert("階層指定に間違いがあります");
+				break;
+		}
+	}	
+
+	var password = document.getElementById('password').value;
+
+	// パスワードが1234なら1234.htmlにリダイレクト
+	if (password === ppss) {
+		window.location.href = upa3;
+	} else {
+		alert(pps);
+	}
+	
+	
+   var ua = window.navigator.userAgent.toLowerCase();
+    var ver = window.navigator.appVersion.toLowerCase();
+    var name = 'unknown';
+
+    if (ua.indexOf("msie") != -1){
+        if (ver.indexOf("msie 6.") != -1){
+            name = 'ie6';
+        }else if (ver.indexOf("msie 7.") != -1){
+            name = 'ie7';
+        }else if (ver.indexOf("msie 8.") != -1){
+            name = 'ie8';
+        }else if (ver.indexOf("msie 9.") != -1){
+            name = 'ie9';
+        }else if (ver.indexOf("msie 10.") != -1){
+            name = 'ie10';
+        }else{
+            name = 'ie';
+        }
+    }else if(ua.indexOf('trident/7') != -1){
+        name = 'ie11';
+    }else if (ua.indexOf('chrome') != -1){
+        name = 'chrome';
+    }else if (ua.indexOf('safari') != -1){
+        name = 'safari';
+    }else if (ua.indexOf('opera') != -1){
+        name = 'opera';
+    }else if (ua.indexOf('firefox') != -1){
+        name = 'firefox';
+    }	
+	
+}
+
+
+
+
+
+
+
+
 function gassyou_js(){
 
 	var vna01= "OP.mp4";
@@ -423,7 +578,10 @@ function kousin_all(){
 	$(function() {$("<img />").attr("src","http://www.inokuchi-h.hiroshima-c.ed-i.jp/access/access.aspx?url=kousin_all");}); 
 
 }
-upa='../event/gassyousai2023/a7B9c3D6e2F5g8H1i4J7k6L9m1.html'
+upa='../event/gassyousai2024/a7B9c3D6e2F5g8H1i4J7k6L9m1.html';
+upa2='../event/gassyousai2024/a7B9c3D6e2F5g8H1i4J7k6L9m2.html';
+upa3='../event/gassyousai2024/a7B9c3D6e2F5g8H1i4J7k6L9m3.html';
+
 function osirase_all(){
 	$("#wel_mov").fadeOut(500);
 	$("#achievements").fadeOut(500);
