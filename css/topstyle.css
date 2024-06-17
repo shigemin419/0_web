@@ -757,7 +757,7 @@
 
 
 	#slider {
-		width: 15000px; /**★スライドの帯の長さ***/
+		width: 10000px; /**★スライドの帯の長さ***/
 		white-space: nowrap;
 		overflow: hidden;
 		font-size: 0;/*これを指定しないと、一週目と２周目の画像の間隔が変わってしまう*/
