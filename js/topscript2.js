@@ -35,7 +35,7 @@
  		
 		access_url="http://www.hiroshima-ch.hiroshima-c.jp/access_pc/Default.aspx?guid=ON&title=";
 
-		
+
 		$(window).on('load resize', function() {
 			const $slider = $('#slider');
 			const $slides = $slider.find('.slide');
@@ -47,8 +47,6 @@
 		
 			$slider.width(totalWidth); 
 		});
-		
-
 	
 
 	
