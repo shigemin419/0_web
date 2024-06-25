@@ -918,7 +918,7 @@
 
 	.marquee {
 		position: relative;
-		animation: scroll-left 300s linear infinite; /*★スライドの速度 一周にかかる時間★  元は20s*/
+		animation: scroll-left 400s linear infinite; /*★スライドの速度 一周にかかる時間★  元は20s*/
 	}
 
 	@keyframes scroll-left {
