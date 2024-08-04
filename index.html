@@ -139,7 +139,7 @@
 		
 	</section>	 -->
 	
-
+	<!-- 拡張機能 bookmarks    Ctrl+Shift+K ブックマーク挿入・削除 Ctrl+Shift+L ジャンプ進む　Ctrl+Shift+J　ジャンプ戻る-->
 	
 	<section id="sec01">
 			
@@ -148,7 +148,7 @@
 		<div class="cont-container">
 			
 	
-		
+<!-- 		
 		<div class="slide slide-up">
 			<div class="cont-item">
 				<a href="event/openschool2024/openschool.html" target="_parent" >
@@ -157,7 +157,7 @@
 					<span class="cont-text2">第１回目の募集は締め切りました。（参加希望者数：809名）第２回目は１０月12日（土）実施予定です。</span>
 				</a>
 			</div>
-		</div>	
+		</div>	 -->
 		
 
 		<div class="slide slide-up2">				
@@ -1303,17 +1303,35 @@
 			
 		<style>
 			.category-text {
-				/*display: block; /* ブロック要素として扱う */
-				/*text-align: center; /* 中央揃え */
-				/*color: blue;*/
 				font-style: normal;
-				/*font-weight: bold;*/
 			}
+	
+			.category-text .bold-text {
+				font-weight: bold;
+			}
+	
+			.category-text .italic-text {
+				font-style: italic;
+			}
+			
 			@media screen and (max-width: 650px) {
-				.category-text {
+				.category-text .pc-text {
+					display: none;
+				}
+				.category-text .sp-text {
+					display: inline;
+				}
+			}
+			
+			@media screen and (min-width: 651px) {
+				.category-text .pc-text {
+					display: inline;
+				}
+				.category-text .sp-text {
 					display: none;
 				}
 			}
+				
 		</style>	
 
 
@@ -1329,7 +1347,12 @@
 		</script>	
 
 
-		<div class="contents">広商公式 ＳＮＳ　<span class="category-text" >下のボタンで<span style="font-style: italic;font-weight: 800;"> 分類別表示</span></span></div>
+		<div class="contents">
+			<span class="category-text">
+				<span class="pc-text"><span class="italic-text">広商公式 ＳＮＳ</span>　　下のボタンで<span class="bold-text"> 分類別表示</span></span>
+				<span class="sp-text"><span class="bold-text">下のボタンで分類別表示(SNS)</span></span>
+			</span>
+		</div>
 
 		<div id="buttons">
 			<button class="filter-btn" data-filter="all">全て表示</button>
@@ -1347,6 +1370,56 @@
 
 			<div class="slide-wrapper">
 				<!-- スライドコンテンツ -->
+
+
+				<div class="slide_sns s_gyouji">
+					<a href="https://www.instagram.com/p/C-Op9EVyzuZ/" target="_parent">
+						<img src="SNS/R6-08-05-3.jpg">
+						<div class="date-label_sns">R6/08/05</div>
+						<span class="instagram"></span>
+					</a>
+				</div>	
+
+
+				<div class="slide_sns s_jyugyou">
+					<a href="https://www.instagram.com/p/C-LwwjzS-e6/" target="_parent">
+						<img src="SNS/R6-08-05-2.jpg">
+						<div class="date-label_sns">R6/08/05</div>
+						<span class="instagram"></span>
+					</a>
+				</div>	
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C-JQFa4SH1N/" target="_parent">
+						<img src="SNS/R6-08-05-1.jpg">
+						<div class="date-label_sns">R6/08/05</div>
+						<span class="instagram"></span>
+					</a>
+				</div>	
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C-H9OsFSN39/" target="_parent">
+						<img src="SNS/R6-08-02-3.jpg">
+						<div class="date-label_sns">R6/08/02</div>
+						<span class="instagram"></span>
+					</a>
+				</div>	
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C-FXrURyOqz/" target="_parent">
+						<img src="SNS/R6-08-02-2.jpg">
+						<div class="date-label_sns">R6/08/02</div>
+						<span class="instagram"></span>
+					</a>
+				</div>	
+
+				<div class="slide_sns s_bukatu">
+					<a href="https://www.instagram.com/p/C-ES9IWyoLh/" target="_parent">
+						<img src="SNS/R6-08-02-1.jpg">
+						<div class="date-label_sns">R6/08/02</div>
+						<span class="instagram"></span>
+					</a>
+				</div>	
 
 				<div class="slide_sns s_syoukenbu">
 					<a href="https://www.instagram.com/p/C-CHWBpS-Vk/?img_index=1" target="_parent">
